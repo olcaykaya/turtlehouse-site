@@ -1,0 +1,117 @@
+media:
+  input: media
+  output: /media
+content:
+  - name: home
+    label: "Ana sayfa"
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: hero_lines, label: "Giriş başlığı (her satır ayrı; italik için <em>kelime</em>)", type: string, list: true }
+      - { name: hero_lead, label: "Giriş alt yazısı", type: text }
+      - { name: hero_video, label: "Giriş videosu — masaüstü (yatay mp4)", type: file }
+      - { name: hero_video_mobile, label: "Giriş videosu — mobil (dikey mp4)", type: file }
+      - { name: hero_poster, label: "Video yüklenirken görünen foto", type: image }
+      - { name: statement, label: "Büyük cümle (01 bölümü)", type: text }
+      - { name: film_video, label: "Açılan büyük video", type: file }
+      - { name: film_caption, label: "Açılan video yazısı", type: string }
+      - { name: testimonial_video, label: "Testimonial videosu", type: file }
+      - name: reels
+        label: "Reels (telefon çerçeveleri)"
+        type: object
+        list: true
+        fields:
+          - { name: video, label: "Dikey video (mp4)", type: file }
+          - { name: poster, label: "Kapak foto", type: image }
+          - { name: caption, label: "Alt yazı", type: string }
+      - name: photos
+        label: "Fotoğraf kartları"
+        type: object
+        list: true
+        fields:
+          - { name: image, label: "Foto", type: image }
+          - { name: title, label: "Başlık", type: string }
+          - { name: text, label: "Kısa yazı", type: string }
+      - name: faq
+        label: "Sık sorulanlar"
+        type: object
+        list: true
+        fields:
+          - { name: q, label: "Soru", type: string }
+          - { name: a, label: "Cevap", type: text }
+  - name: work
+    label: "Portföy (Work sayfası)"
+    type: file
+    path: content/work.json
+    format: json
+    fields:
+      - name: items
+        label: "Fotoğraf / videolar"
+        type: object
+        list: true
+        fields:
+          - { name: file, label: "Foto veya video", type: file }
+          - { name: category, label: "Kategori", type: select, options: { values: [homes, hotels, food, set] } }
+          - { name: caption, label: "Yazı", type: string }
+  - name: services
+    label: "Hizmet sayfaları"
+    type: file
+    path: content/services.json
+    format: json
+    fields:
+      - name: items
+        label: "Hizmetler"
+        type: object
+        list: true
+        fields:
+          - { name: short, label: "Kısa ad (menüde)", type: string }
+          - { name: name, label: "Tam ad", type: string }
+          - { name: slug, label: "Adres (değiştirme — Google sıralaması bozulur)", type: string }
+          - { name: line, label: "Listede görünen tek cümle", type: string }
+          - { name: title, label: "Google başlığı", type: string }
+          - { name: desc, label: "Google açıklaması", type: text }
+          - { name: h1, label: "Sayfa başlığı satırları", type: string, list: true }
+          - { name: lead, label: "Giriş paragrafı", type: text }
+          - { name: img, label: "Ana foto", type: image }
+          - { name: strip, label: "Foto şeridi", type: image, list: true }
+          - name: deliv
+            label: "Neler teslim ediliyor"
+            type: object
+            list: true
+            fields: [ { name: title, label: "Başlık", type: string }, { name: text, label: "Açıklama", type: string } ]
+          - { name: body, label: "Paragraflar", type: text, list: true }
+          - name: faq
+            label: "Sık sorulanlar"
+            type: object
+            list: true
+            fields: [ { name: q, label: "Soru", type: string }, { name: a, label: "Cevap", type: text } ]
+  - name: areas
+    label: "Bölge sayfaları (NJ / NYC / DC)"
+    type: file
+    path: content/areas.json
+    format: json
+    fields:
+      - name: items
+        label: "Bölgeler"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Bölge", type: string }
+          - { name: slug, label: "Adres (değiştirme)", type: string }
+          - { name: towns, label: "Şehirler", type: string }
+          - { name: title, label: "Google başlığı", type: string }
+          - { name: desc, label: "Google açıklaması", type: text }
+          - { name: h1, label: "Başlık satırları", type: string, list: true }
+          - { name: lead, label: "Giriş paragrafı", type: text }
+          - { name: body, label: "Paragraflar", type: text, list: true }
+          - { name: img, label: "Foto", type: image }
+  - name: site
+    label: "İletişim bilgileri"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: phone, label: "Telefon", type: string }
+      - { name: email, label: "E-posta", type: string }
+      - { name: instagram, label: "Instagram linki", type: string }

@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "slug": "new-jersey",
+      "name": "New Jersey",
+      "towns": "Jersey City · Hoboken · Weehawken · Edgewater · Fort Lee · Hudson & Bergen County",
+      "title": "Video Production Company in New Jersey | Jersey City, Hoboken, Weehawken",
+      "desc": "Turtle House Productions is a video and photo production company based in Weehawken, NJ, serving Jersey City, Hoboken, Edgewater and North Jersey.",
+      "h1": [
+        "Video production,",
+        "from <em>across</em>",
+        "the river."
+      ],
+      "lead": "We are based in Weehawken, minutes from Hoboken, Jersey City and the Lincoln Tunnel. That means North Jersey clients get a local crew, and Manhattan is one tunnel away.",
+      "body": [
+        "Hudson County has changed fast. Waterfront towers, new restaurants in Jersey City and Hoboken, and remodeled brownstones all compete for the same attention as Manhattan. We shoot real estate, restaurants, hotels and brands here every week.",
+        "Being local means we can scout before the shoot, come back for golden hour, and plan around the skyline view that half of the waterfront is selling."
+      ],
+      "img": "media/k5.jpg"
+    },
+    {
+      "slug": "new-york-city",
+      "name": "New York City",
+      "towns": "Manhattan · Brooklyn · Queens · Long Island City",
+      "title": "NYC Video Production Company | Luxury, Real Estate, Hospitality",
+      "desc": "Video production and photography in Manhattan, Brooklyn and Queens for luxury brands, real estate, hotels and restaurants. Turtle House Productions.",
+      "h1": [
+        "New York,",
+        "filmed like it",
+        "<em>costs</em> what it does."
+      ],
+      "lead": "Manhattan clients expect a crew that knows the city: building access, loading docks, permits and how the light falls between towers. We work across Manhattan, Brooklyn and Queens from our base just across the Hudson.",
+      "body": [
+        "In New York the bar is set by the best brands in the world. Jewelry houses on Fifth Avenue, hotels in SoHo and residences on Billionaires' Row all live in the same feed as your work. We shoot for that standard.",
+        "We plan around the city: building management, freight elevators, street permits where they are needed, and the hours when a space is quiet."
+      ],
+      "img": "media/h4.jpg"
+    },
+    {
+      "slug": "washington-dc",
+      "name": "Washington DC",
+      "towns": "Washington DC · Georgetown · Northern Virginia",
+      "title": "Video Production in Washington DC | Turtle House Productions",
+      "desc": "Turtle House Productions films real estate, hospitality and brand content in Washington DC, Georgetown and Northern Virginia.",
+      "h1": [
+        "Washington DC,",
+        "on the",
+        "<em>same</em> standard."
+      ],
+      "lead": "We travel to DC and Northern Virginia for real estate, hospitality and brand work, with the same crew and the same plan-first approach we use in New York.",
+      "body": [
+        "DC projects are often planned weeks ahead around events and access, so we scout remotely, confirm locations early and arrive with a shot list that is already approved.",
+        "Clients who work in both New York and DC get one consistent look across both markets."
+      ],
+      "img": "media/r2.jpg"
+    }
+  ]
+}

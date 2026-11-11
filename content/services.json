@@ -1,0 +1,284 @@
+{
+  "items": [
+    {
+      "slug": "real-estate-video-photography",
+      "short": "Real estate",
+      "name": "Real Estate Video & Photography",
+      "line": "Listing films, photo sets and agent intros for homes that should sell on the first scroll.",
+      "title": "Real Estate Video & Photography in NJ & NYC",
+      "desc": "Listing films, real estate photography, drone and agent intro videos across Jersey City, Hoboken, Manhattan and Brooklyn. Turtle House Productions, Weehawken NJ.",
+      "h1": [
+        "Listings that",
+        "sell on the",
+        "<em>first</em> scroll."
+      ],
+      "lead": "A buyer decides in about the time it takes to swipe. We shoot homes for that moment: a vertical film for Reels, a horizontal cut for the MLS and YouTube, and a photo set that holds up on a phone and a 27-inch screen.",
+      "body": [
+        "Hudson County and Manhattan listings compete in the same feed. A buyer looking in Hoboken is also looking at Long Island City and the Upper West Side, so the listing has to read as the best version of the home in the first three seconds.",
+        "We plan the walk-through before we film it: which room opens the film, where the light is best and when, and what the one shot is that people remember. That plan is why our listings feel like a place, not a slideshow."
+      ],
+      "img": "media/k1.jpg",
+      "strip": [
+        "media/k3.jpg",
+        "media/k5.jpg",
+        "media/h2.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Listing film",
+          "text": "Horizontal and vertical cuts, color graded, music licensed"
+        },
+        {
+          "title": "Photo set",
+          "text": "Wide, detail and twilight frames, edited for MLS and print"
+        },
+        {
+          "title": "Drone",
+          "text": "Exterior, street and neighborhood context, where airspace allows"
+        },
+        {
+          "title": "Agent intro",
+          "text": "A short on-camera piece that sells you, not just the house"
+        },
+        {
+          "title": "Social package",
+          "text": "Reels, Stories and carousel frames cut from the same shoot"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you shoot both video and photos in one visit?",
+          "a": "Yes. One crew, one visit, one plan. Photo and video are scheduled around the same light so the set feels consistent."
+        },
+        {
+          "q": "Do you make vertical videos for Instagram and TikTok?",
+          "a": "Every listing film is planned for both 16:9 and 9:16, so the vertical cut is framed for phones instead of cropped from the wide version."
+        },
+        {
+          "q": "Which areas do you cover?",
+          "a": "We are based in Weehawken, NJ and shoot across Hudson County, North Jersey, Manhattan, Brooklyn and Queens, plus Washington DC and Northern Virginia."
+        }
+      ]
+    },
+    {
+      "slug": "luxury-brand-video-production",
+      "short": "Luxury & brands",
+      "name": "Luxury Brand Video Production",
+      "line": "Fine jewelry, private aviation, yachts and $5M+ residences. Quiet, expensive, exact.",
+      "title": "Luxury Brand Video Production NYC | Jewelry, Aviation, Residences",
+      "desc": "Cinematic video and photography for luxury brands in New York and New Jersey: fine jewelry boutiques, private aviation, yachts and high-end residences.",
+      "h1": [
+        "For brands that",
+        "don't do",
+        "<em>discounts.</em>"
+      ],
+      "lead": "Luxury is mostly what you leave out. We shoot jewelry, aircraft, yachts and residences with slow light, controlled reflections and very few words, so the object does the talking.",
+      "body": [
+        "Expensive objects are hard to film. Gold and diamonds mirror everything in the room, aircraft cabins are tight, and a residence at this level has to feel calm rather than staged. Most of our time goes into light and reflections before the camera rolls.",
+        "We work discreetly. Shoots can be scheduled outside opening hours, crews are small, and nothing is posted to our channels without your written approval."
+      ],
+      "img": "media/h3.jpg",
+      "strip": [
+        "media/r1.jpg",
+        "media/h4.jpg",
+        "media/r3.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Product films",
+          "text": "Macro and motion-control style shots for jewelry and watches"
+        },
+        {
+          "title": "Aviation & yacht",
+          "text": "Cabin, ramp and on-water films for charter and sales teams"
+        },
+        {
+          "title": "Residence films",
+          "text": "Cinematic tours for $5M+ homes and new developments"
+        },
+        {
+          "title": "Campaign stills",
+          "text": "Editorial photography for web, print and paid social"
+        },
+        {
+          "title": "Event coverage",
+          "text": "Launches, private viewings and client evenings"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you film in our boutique before or after opening hours?",
+          "a": "Yes. Most boutique and showroom shoots are scheduled outside client hours so the space is clear and the light is controlled."
+        },
+        {
+          "q": "Do you work at Teterboro and other private terminals?",
+          "a": "We plan aviation shoots with the operator and FBO in advance and follow their access and safety rules on the ramp."
+        },
+        {
+          "q": "Will you post our project on your social media?",
+          "a": "Only with your written approval. Many luxury clients prefer private work, and that is fine."
+        }
+      ]
+    },
+    {
+      "slug": "hotel-resort-video-production",
+      "short": "Hotels & resorts",
+      "name": "Hotel & Resort Video Production",
+      "line": "Rooms, lobbies, the pool at golden hour. Films that sell the stay before the booking page.",
+      "title": "Hotel & Resort Video Production | NYC, NJ, DC",
+      "desc": "Hotel and resort films, room photography and social content that sell the stay. Turtle House Productions shoots hospitality across New York, New Jersey and DC.",
+      "h1": [
+        "Sell the stay",
+        "before the",
+        "<em>booking</em> page."
+      ],
+      "lead": "Guests book a feeling, then check the price. We film the feeling: the first look at the room, the light in the lobby at five, the pool when nobody is in it yet.",
+      "body": [
+        "A hotel's photos live on its own site, on booking platforms and on every guest's phone. We build a library that stays consistent across all of them, shot on a plan so each room category looks like the same hotel.",
+        "We schedule around occupancy and housekeeping so the shoot does not get in the way of guests."
+      ],
+      "img": "media/h1.jpg",
+      "strip": [
+        "media/r2.jpg",
+        "media/h3.jpg",
+        "media/r4.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Brand film",
+          "text": "A 60 to 90 second hero film for the website and OTA listings"
+        },
+        {
+          "title": "Room library",
+          "text": "Photography for every room category, consistent across the set"
+        },
+        {
+          "title": "Social content",
+          "text": "Reels and Stories built from one shoot, ready to schedule"
+        },
+        {
+          "title": "F&B",
+          "text": "Restaurant, bar and room service frames"
+        },
+        {
+          "title": "Events & weddings",
+          "text": "Venue films for sales teams"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you shoot while the hotel is open?",
+          "a": "Yes. We plan room access with housekeeping and work around guests, usually in small blocks across one or two days."
+        },
+        {
+          "q": "Do you deliver content for booking platforms?",
+          "a": "We export to the sizes and ratios your booking channels and website need, along with vertical cuts for social."
+        }
+      ]
+    },
+    {
+      "slug": "restaurant-food-video-photography",
+      "short": "Restaurants",
+      "name": "Restaurant Video & Food Photography",
+      "line": "Plates, pours and the room at night. Content that fills tables, not just feeds.",
+      "title": "Restaurant Video & Food Photography | NYC & New Jersey",
+      "desc": "Food photography, restaurant Reels and menu shoots in Manhattan, Brooklyn, Jersey City and Hoboken. Content built to fill tables.",
+      "h1": [
+        "Content that",
+        "fills <em>tables,</em>",
+        "not just feeds."
+      ],
+      "lead": "People choose dinner on their phone. We shoot the plate, the pour and the room at night so the reservation happens before they finish scrolling.",
+      "body": [
+        "A restaurant's best marketing is a photo a guest saves and sends to a friend. We plan shoots around service so food comes straight from the pass to the lens, and the room is shot when it looks its best.",
+        "One shoot gives you a month of posts: plates, process, people and place."
+      ],
+      "img": "media/f2.jpg",
+      "strip": [
+        "media/f6.jpg",
+        "media/f1.jpg",
+        "media/f5.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Menu photography",
+          "text": "Every dish, lit to look like it does at the table"
+        },
+        {
+          "title": "Reels",
+          "text": "Short vertical films with sound, built for Instagram and TikTok"
+        },
+        {
+          "title": "The room",
+          "text": "Interior and atmosphere shots for Google, Resy and OpenTable"
+        },
+        {
+          "title": "Launch content",
+          "text": "New menu, new location, opening night"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long does a restaurant shoot take?",
+          "a": "It depends on the menu and the room. We plan it with you beforehand and schedule around service so the kitchen is not slowed down."
+        },
+        {
+          "q": "Do you also update our Google Business photos?",
+          "a": "We deliver files sized for Google, Resy, OpenTable and your website, so you can update all of them from one shoot."
+        }
+      ]
+    },
+    {
+      "slug": "testimonial-video-production",
+      "short": "Testimonials",
+      "name": "Client Testimonial Video Production",
+      "line": "Real clients, real projects. Testimonial films for remodelers, builders and service brands.",
+      "title": "Testimonial Video Production NJ | Remodelers, Builders, Brands",
+      "desc": "Client testimonial videos for kitchen remodelers, builders, designers and service businesses in New Jersey and New York. Real stories, filmed well.",
+      "h1": [
+        "Let the client",
+        "say it",
+        "<em>for you.</em>"
+      ],
+      "lead": "Nothing sells a remodel like the homeowner standing in the finished kitchen. We film real clients telling real stories, then cut them into a long version for your site and short versions for ads and Reels.",
+      "body": [
+        "Most people are nervous on camera. We keep the crew small, ask questions instead of handing out scripts, and film long enough that people forget the camera is there. That is where the honest lines come from.",
+        "We have filmed kitchen and remodel stories in New Jersey with the homeowner in the finished space, and that format works for builders, designers and any service where the result lives in someone's home."
+      ],
+      "img": "media/k4.jpg",
+      "strip": [
+        "media/k2.jpg",
+        "media/k1.jpg",
+        "media/b2.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Interview",
+          "text": "Lit, two-camera, clean audio, in the finished space"
+        },
+        {
+          "title": "B-roll",
+          "text": "The work itself: details, materials, before and after"
+        },
+        {
+          "title": "Cuts",
+          "text": "A long story for the website, short versions for ads and social"
+        },
+        {
+          "title": "Captions",
+          "text": "Burned-in captions so it works with the sound off"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you write a script for the client?",
+          "a": "No. We ask questions and let people answer in their own words. Real answers are more convincing than read lines."
+        },
+        {
+          "q": "Can you make short ads from the testimonial?",
+          "a": "Yes. Every testimonial shoot is cut into a full version and several short vertical versions for ads and social."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "hero_lines": [
+    "Places that",
+    "<em>look</em> like what",
+    "they cost."
+  ],
+  "hero_lead": "Video, reels and photography for homes, hotels, restaurants and luxury brands across New Jersey and New York.",
+  "hero_video": "media/v_resort.mp4",
+  "hero_video_mobile": "media/reels/reel1.mp4",
+  "hero_poster": "media/r2.jpg",
+  "statement": "A listing gets three seconds. A hotel gets one scroll. A jewelry brand gets <em>one</em> glance. We build the frame that earns the next one.",
+  "film_video": "media/v_kitchen.mp4",
+  "film_caption": "Kitchen film · New Jersey",
+  "testimonial_video": "media/v_testimonial.mp4",
+  "reels": [
+    {
+      "video": "media/reels/reel1.mp4",
+      "poster": "media/reels/reel1.jpg",
+      "caption": "Butterfly VFX · Resort"
+    },
+    {
+      "video": "media/reels/reel2.mp4",
+      "poster": "media/reels/reel2.jpg",
+      "caption": "Glass fish · Resort"
+    },
+    {
+      "video": "media/reels/reel3.mp4",
+      "poster": "media/reels/reel3.jpg",
+      "caption": "Atmosphere · Resort"
+    },
+    {
+      "video": "media/reels/reel4.mp4",
+      "poster": "media/reels/reel4.jpg",
+      "caption": "Flowers · Restaurant"
+    },
+    {
+      "video": "media/reels/reel5.mp4",
+      "poster": "media/reels/reel5.jpg",
+      "caption": "The glass · Bar"
+    },
+    {
+      "video": "media/reels/reel6.mp4",
+      "poster": "media/reels/reel6.jpg",
+      "caption": "Raw cut · Resort"
+    }
+  ],
+  "photos": [
+    {
+      "image": "media/k5.jpg",
+      "title": "Homes & interiors",
+      "text": "Listings, remodels, finished kitchens"
+    },
+    {
+      "image": "media/h1.jpg",
+      "title": "Hotels & resorts",
+      "text": "Rooms, lobbies, the stay itself"
+    },
+    {
+      "image": "media/f2.jpg",
+      "title": "Restaurants",
+      "text": "Plates, pours, the room at night"
+    },
+    {
+      "image": "media/r1.jpg",
+      "title": "Resorts",
+      "text": "Light, water, slow mornings"
+    },
+    {
+      "image": "media/f6.jpg",
+      "title": "Food",
+      "text": "Every dish, lit like the table"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does Turtle House Productions do?",
+      "a": "We produce video and photography for real estate, luxury brands, hotels, restaurants and service businesses, from planning and filming to edit, color and social cuts."
+    },
+    {
+      "q": "Where are you based?",
+      "a": "Weehawken, New Jersey, across the Hudson from Midtown Manhattan. We work across New Jersey, New York City and Washington DC."
+    },
+    {
+      "q": "Do you post prices on the site?",
+      "a": "No. Every project is different, so we quote after a short call about what you need, where and when."
+    },
+    {
+      "q": "How do we start?",
+      "a": "Call or email us with the place, the date you have in mind and where the content will run. We reply with a plan and a quote."
+    }
+  ]
+}
