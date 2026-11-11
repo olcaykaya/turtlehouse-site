@@ -134,7 +134,7 @@ def head(p, title, desc, path, schemas):
 <div class="cursor" aria-hidden="true"></div>'''
 
 def nav(p):
-    links = [("Work",p+"work.html"),("Services",p+"services/index.html"),("Areas",p+"areas/index.html"),("About",p+"about.html")]
+    links = [("Work",p+"work.html"),("Services",p+"services/index.html"),("Areas",p+"areas/index.html"),("Blog",p+"blog/index.html"),("About",p+"about.html")]
     li = "".join(f'<li><a href="{h}">{t}</a></li>' for t,h in links)
     mi = "".join(f'<a href="{h}">{t}</a>' for t,h in links+[("Contact",p+"contact.html")])
     return f'''<header class="nav"><a class="logo" href="{p}index.html" aria-label="Turtle House Productions home"><img src="{p}media/logo-black.png" alt="Turtle House Productions" width="103" height="22"></a>
@@ -351,6 +351,103 @@ def contact():
 <label>Tell us about your project<textarea name="message"></textarea></label><button class="btn" type="submit">Send project inquiry {ARR}</button><p class="note">Prefer email? Write to {EMAIL}. You can also call us at {PHONE}.</p></form></div></section>''' + foot(p)
     write("contact.html", s)
 
+
+# ---------------- BLOG (content/blog/*.md) ----------------
+def md_inline(t):
+    t = esc(t)
+    t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+    t = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?!\w)", r"<em>\1</em>", t)
+    def link(m):
+        href = m.group(2).replace("&amp;", "&")
+        if href.startswith("/") and not href.startswith("/media"): href = href.rstrip("/") or "/"
+        ext = href.startswith("http") and "turtlehouseproductions.com" not in href
+        return f'<a href="{href}"' + (' rel="noopener" target="_blank"' if ext else "") + f'>{m.group(1)}</a>'
+    return re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, t)
+
+def md_html(md, root):
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    out, para, lst, ltype = [], [], [], None
+    def flush():
+        nonlocal para, lst, ltype
+        if para: out.append("<p>" + md_inline(" ".join(para)) + "</p>"); para = []
+        if lst: out.append(f"<{ltype}>" + "".join(f"<li>{md_inline(x)}</li>" for x in lst) + f"</{ltype}>"); lst = []; ltype = None
+    for line in md.split("\n"):
+        s = line.strip()
+        if not s: flush(); continue
+        m = re.match(r"!\[([^\]]*)\]\(([^)]+)\)", s)
+        if m:
+            flush(); out.append(f'<figure class="bf"><img src="{root}{m.group(2).lstrip("/")}" alt="{esc(m.group(1))}" loading="lazy"></figure>'); continue
+        if re.match(r"^\*[^*].*\*$", s) and out and out[-1].startswith('<figure class="bf">') and not para:
+            out[-1] = out[-1].replace("</figure>", f"<figcaption>{md_inline(s[1:-1])}</figcaption></figure>"); continue
+        m = re.match(r"(#{2,4})\s+(.*)", s)
+        if m: flush(); n = len(m.group(1)); out.append(f"<h{n}>{md_inline(m.group(2))}</h{n}>"); continue
+        if s == "---": flush(); out.append("<hr>"); continue
+        m = re.match(r"[-*]\s+(.*)", s)
+        if m:
+            if para or ltype == "ol": flush()
+            ltype = "ul"; lst.append(m.group(1)); continue
+        m = re.match(r"\d+[.)]\s+(.*)", s)
+        if m:
+            if para or ltype == "ul": flush()
+            ltype = "ol"; lst.append(m.group(1)); continue
+        if lst: flush()
+        para.append(s)
+    flush()
+    return "\n".join(out)
+
+def load_posts():
+    posts = []
+    d = os.path.join(SRC, "content", "blog")
+    for fn in sorted(os.listdir(d), reverse=True):
+        if not fn.endswith(".md"): continue
+        raw = open(os.path.join(d, fn), encoding="utf-8").read()
+        m = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.S)
+        meta = {}
+        for ln in m.group(1).split("\n"):
+            if ":" in ln: k, v = ln.split(":", 1); meta[k.strip()] = v.strip().strip('"')
+        meta["date"] = meta.get("date") or fn[:10]
+        meta["body"] = m.group(2)
+        meta["slug"] = meta.get("slug") or fn[11:-3]
+        meta["cover"] = (meta.get("cover") or "").replace("photos/blog/", "media/blog/")
+        posts.append(meta)
+    return posts
+
+def blog():
+    posts = load_posts()
+    import datetime
+    nice = lambda d: datetime.date.fromisoformat(d).strftime("%B %-d, %Y")
+    for i, po in enumerate(posts):
+        p = "../"; path = f"/blog/{po['slug']}"
+        art = {"@context":"https://schema.org","@type":"BlogPosting","headline":po["title"],"datePublished":po["date"],"dateModified":po["date"],
+               "author":{"@type":"Organization","name":"Turtle House Productions"},"publisher":{"@id":BASE+"/#org"},
+               "image":BASE+"/"+po["cover"] if po["cover"] else None,"mainEntityOfPage":BASE+path,"description":po.get("seo_description","")}
+        more = "".join([f'<a href="{x["slug"]}.html">{esc(x["title"])}</a>' for x in posts if x is not po][:3])
+        s = head(p, po.get("seo_title") or po["title"], po.get("seo_description") or po.get("excerpt",""), path,
+                 [ORG, art, crumbs_schema([("Home","/"),("Blog","/blog/"),(po["title"],path)])]) + nav(p) + f'''
+<article><section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / <a href="index.html">Blog</a></p>
+<p class="mono" style="color:var(--ink-2);margin-bottom:var(--s2)">{nice(po["date"])}</p><h1 class="h-l post-h1">{esc(po["title"])}</h1>
+<p class="lead">{esc(po.get("excerpt",""))}</p></div></section>
+{f'<div class="post-cover wrap"><img src="{p}{po["cover"]}" alt="{esc(po["title"])}"></div>' if po["cover"] else ""}
+<section class="sec" style="padding-top:var(--s5)"><div class="wrap"><div class="post">{md_html(po["body"], p)}</div></div></section></article>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">More from the blog</p><div class="related">{more}</div></div></section>
+''' + closing(p) + foot(p)
+        write(f"blog/{po['slug']}.html", s)
+    p = "../"
+    cards = "".join(f'''<a class="pcard rv" href="{po["slug"]}.html">{f'<div class="m"><img src="{p}{po["cover"]}" alt="" loading="lazy"></div>' if po["cover"] else ""}<span class="mono">{nice(po["date"])}</span><h2>{esc(po["title"])}</h2><p>{esc(po.get("excerpt",""))}</p></a>''' for po in posts)
+    s = head(p, "Blog | Video & Photography Tips for NJ & NYC | Turtle House", "Practical guides on real estate, restaurant, hotel and testimonial video and photography from Turtle House Productions in Weehawken, NJ.", "/blog/", [ORG]) + nav(p) + f'''
+<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / Blog</p>{h1(["Notes from","the <em>shoot.</em>"])}
+<p class="lead">Practical guides on real estate, restaurant, hotel and testimonial video and photography in New Jersey and New York City.</p></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="pgrid">{cards}</div></div></section>''' + closing(p) + foot(p)
+    write("blog/index.html", s)
+    return [f"/blog/{po['slug']}" for po in posts]
+
+def notfound():
+    p = "/"
+    s = head(p, "Page not found | Turtle House Productions", "This page has moved.", "/404.html", [ORG]).replace('<link rel="canonical"','<meta name="robots" content="noindex"><link rel="canonical"') + nav(p) + f'''
+<section class="page-hero"><div class="wrap">{h1(["This page","has <em>moved.</em>"])}<p class="lead">Our website has a new home. Try one of these instead:</p>
+<div class="related" style="margin-top:var(--s4)"><a href="/work">Our work</a><a href="/services/">Services</a><a href="/blog/">Blog</a><a href="/contact">Contact</a></div></div></section>''' + foot(p)
+    write("404.html", s)
+
 def thanks():
     p = ""
     s = head(p, "Thank you | Turtle House Productions", "Your message has been sent.", "/thanks.html", [ORG]).replace('<link rel="canonical"','<meta name="robots" content="noindex"><link rel="canonical"') + nav(p) + f'''
@@ -359,12 +456,14 @@ def thanks():
     write("thanks.html", s)
 
 def seo_files():
-    urls = ["/","/services/","/areas/","/work.html","/about.html","/contact.html"]+[f"/services/{s['slug']}.html" for s in SERVICES]+[f"/areas/{a['slug']}.html" for a in AREAS]
+    urls = ["/","/services/","/areas/","/work.html","/about.html","/contact.html"]+[f"/services/{s['slug']}.html" for s in SERVICES]+[f"/areas/{a['slug']}.html" for a in AREAS]+["/blog/"]+BLOG_URLS
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{BASE}{u}</loc></url>" for u in urls)+"</urlset>")
+    write("_redirects", "\n".join(["/post/:slug  /blog/:slug  301", "/blog-1  /blog/  301", "/portfolio  /work  301", "/works  /work  301", "/our-work  /work  301",
+        "/scantoconnect  /contact  301", "/contact-us  /contact  301", "/about-us  /about  301", "/home  /  301"]) + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: {BASE}/sitemap.xml\n")
     return len(urls)
 
-thanks(); home(); services_index(); areas_index(); work(); about(); contact()
+BLOG_URLS = blog(); notfound(); thanks(); home(); services_index(); areas_index(); work(); about(); contact()
 for s in SERVICES: service(s)
 for a in AREAS: area(a)
 for d in ("assets", "media", "admin"):
