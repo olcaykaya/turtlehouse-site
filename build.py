@@ -143,16 +143,16 @@ def nav(p):
 <div class="menu" aria-label="Mobile menu">{mi}<span class="mono">{PHONE} · {EMAIL}</span></div><main>'''
 
 def foot(p):
-    s = "".join(f'<li><a href="{p}services/{x["slug"]}.html">{x["short"]}</a></li>' for x in SERVICES)
+    s = "".join(f'<li><a href="{p}services/{x["slug"]}.html">{x["name"]}</a></li>' for x in SERVICES)
     a = "".join(f'<li><a href="{p}areas/{x["slug"]}.html">{x["name"]}</a></li>' for x in AREAS)
-    return f'''</main><div class="lb" hidden><div class="lb-stage"></div><p class="lb-cap mono"></p><button class="lb-x glass" aria-label="Close">✕</button><button class="lb-p glass" aria-label="Previous">←</button><button class="lb-n glass" aria-label="Next">→</button></div><div class="shutter" aria-hidden="true"><i></i><i></i></div><nav class="mbar" aria-label="Quick contact"><a href="tel:{TEL}" class="mb-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a><a href="{IG}" rel="noopener" class="mb-ig">Reels</a><a href="{p}contact.html" class="mb-go">Start a project {ARR}</a></nav><footer><div class="wrap"><div class="foot"><div><img src="{p}media/logo-black.png" alt="Turtle House Productions" width="103" height="22" style="height:22px;width:auto;margin-bottom:16px"><p style="max-width:34ch">Video and photography for places and brands. Based in Weehawken, NJ. Working across New York, New Jersey and DC.</p></div>
+    return f'''</main><div class="lb" hidden><div class="lb-stage"></div><p class="lb-cap mono"></p><button class="lb-x glass" aria-label="Close">✕</button><button class="lb-p glass" aria-label="Previous">←</button><button class="lb-n glass" aria-label="Next">→</button></div><div class="shutter" aria-hidden="true"><i></i><i></i></div><nav class="mbar" aria-label="Quick contact"><a href="tel:{TEL}" class="mb-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a><a href="{IG}" rel="noopener" class="mb-ig">Reels</a><a href="{p}contact.html" class="mb-go">Start a project {ARR}</a></nav><footer><div class="wrap"><div class="foot"><div><img src="{p}media/logo-black.png" alt="Turtle House Productions" width="103" height="22" style="height:22px;width:auto;margin-bottom:16px"><p style="max-width:34ch">Video production and photography for real estate, hospitality, restaurants and brands. Based in Weehawken, New Jersey, serving NJ and NYC.</p></div>
 <div><h4>Services</h4><ul>{s}</ul></div><div><h4>Areas</h4><ul>{a}</ul></div>
 <div><h4>Contact</h4><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{IG}" rel="noopener">Instagram</a></li><li><a href="{p}contact.html">Start a project</a></li></ul></div></div>
-<div class="foot-base"><span>© 2026 Turtle House Productions</span><span class="mono">Weehawken, NJ · 40.769° N</span></div></div></footer>
+<div class="foot-base"><span>© 2026 Turtle House Productions</span><span class="mono">Weehawken, New Jersey</span></div></div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="{p}assets/main.js"></script></body></html>'''
 
-def h1(lines, cls="h-xxl"):
+def h1(lines, cls="h-xl"):
     return f'<h1 class="{cls}">' + "".join(f'<span class="ln"><span>{l}</span></span>' for l in lines) + "</h1>"
 
 def faq_html(faq):
@@ -164,9 +164,10 @@ def faq_schema(faq):
 def crumbs_schema(items):
     return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+u} for i,(n,u) in enumerate(items)]}
 
-def closing(p, line="Have a place <em>worth</em> filming?"):
-    return f'''<section class="close"><div class="wrap"><p class="mono eyebrow">Next scene</p><h2 class="h-xxl"><a href="{p}contact.html">{line}</a></h2>
-<div class="contact-grid"><div><span class="mono">Call</span><a href="tel:{TEL}">{PHONE}</a></div><div><span class="mono">Write</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span class="mono">Watch</span><a href="{IG}" rel="noopener">@turtlehouseprod</a></div></div></div></section>'''
+def closing(p, h2="Have a project<br>in <em>mind?</em>", text="Tell us what you are looking to create. We’ll help you plan the shoot.", third=None):
+    lbl, href = third or ("View our work", p + "work.html")
+    return f'''<section class="close"><div class="wrap"><p class="mono eyebrow">Contact</p><h2 class="h-xl"><a href="{p}contact.html">{h2}</a></h2><p class="lead" style="margin-top:var(--s3)">{text}</p>
+<div class="contact-grid"><div><span class="mono">Call us</span><a href="tel:{TEL}">{PHONE}</a></div><div><span class="mono">Email us</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span class="mono">See more</span><a href="{href}">{lbl} →</a></div></div></div></section>'''
 
 def write(path, s):
     full = os.path.join(OUT, path); os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -197,14 +198,11 @@ def home():
     STK = [(F(x["image"]), x["title"], x["text"]) for x in H["photos"]]
     stack = "".join(f'<figure class="card" style="--i:{i}"><img src="media/{f}" alt="{esc(t)} photography by Turtle House Productions" loading="lazy"><figcaption class="glass"><span class="mono">0{i+1} / 0{len(STK)}</span><b>{t}</b><span>{d}</span></figcaption></figure>' for i,(f,t,d) in enumerate(STK))
     reel = "".join(f'<figure class="reel-item"><div class="m">{media_tag(p,f,c)}</div><figcaption class="cap mono"><span>{c}</span><span>{i+1:02d}</span></figcaption></figure>' for i,(f,_,c) in enumerate([WORK[i] for i in (1,0,3,2,4,6,5,9,8,12)]))
-    lux = "".join(f'<a href="services/luxury-brand-video-production.html"><span class="mono dim">{n}</span><div><h3>{t}</h3><p>{d}</p></div></a>' for n,t,d in [
-        ("I","Fine jewelry","Boutiques, collections and private viewings. Light that behaves on gold and stone."),
-        ("II","Private aviation","Cabins, ramps and departures for charter and sales teams."),
-        ("III","Residences","Cinematic films for $5M+ homes and new developments."),
-        ("IV","Yachts & clubs","On-water films, members' spaces, evenings worth remembering.")])
-    areas = "".join(f'<a class="area rv" href="areas/{a["slug"]}.html"><span class="mono">0{i+1} — Area</span><h3>{a["name"]}</h3><p>{a["towns"]}</p></a>' for i,a in enumerate(AREAS))
-    s = head(p, "Turtle House Productions | Video Production NJ & NYC — Real Estate, Luxury, Hospitality",
-             "Cinematic video and photography for real estate, luxury brands, hotels and restaurants. Based in Weehawken, NJ, filming across Jersey City, Hoboken, Manhattan, Brooklyn and Washington DC.",
+    lux = "".join(f'<a href="services/luxury-brand-video-production.html"><span class="mono dim">0{i+1}</span><div><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div></a>' for i,x in enumerate(H["lux_items"]))
+    steps = "".join(f'<div class="step rv"><span class="mono">0{i+1} / {esc(x["title"])}</span><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div>' for i,x in enumerate(H["steps"]))
+    areas = "".join(f'<a class="area rv" href="areas/{a["slug"]}.html"><span class="mono">0{i+1} — Area</span><h3>{a["name"]}</h3><p>{a["summary"]}</p></a>' for i,a in enumerate(AREAS))
+    s = head(p, H["seo_title"],
+             H["seo_desc"],
              "/", [ORG, faq_schema(HOME_FAQ)]) + '<div class="intro" aria-hidden="true"><span class="mono"><span class="intro-t"><i class="dot"></i>Turtle House Productions — Scene 01</span></span><span class="intro-n">00</span></div>' + nav(p) + f'''
 <section class="hero2" aria-label="Intro">
 <video class="hero-src" data-d="media/{F(H['hero_video'])}" data-m="media/{F(H['hero_video_mobile'])}" poster="media/{F(H['hero_poster'])}" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
@@ -218,134 +216,139 @@ def home():
 <div class="ticker" aria-hidden="true"><div class="ticker-in"><span>Reels</span><i>✦</i><span>Real estate</span><i>✦</i><span>Fine jewelry</span><i>✦</i><span>Hotels</span><i>✦</i><span>Restaurants</span><i>✦</i><span>Private aviation</span><i>✦</i><span>Reels</span><i>✦</i><span>Real estate</span><i>✦</i><span>Fine jewelry</span><i>✦</i><span>Hotels</span><i>✦</i><span>Restaurants</span><i>✦</i><span>Private aviation</span><i>✦</i></div></div>
 </section>
 
-<section class="statement"><div class="wrap"><div class="mono eyebrow">01 — The problem</div>
+<section class="statement"><div class="wrap"><div class="mono eyebrow">01 — What we do</div>
 <p>{H["statement"]}</p></div></section>
 
 <section class="film" aria-label="Showreel"><div class="film-sticky"><div class="film-frame"><video src="media/{F(H['film_video'])}" poster="media/k1.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Kitchen film excerpt"></video></div>
 <p class="film-cap mono">{H["film_caption"]}</p></div></section>
 
-<section class="reels sec" aria-label="Reels"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">02 — Reels</p><h2 class="h-xl">Made for the<br><em>vertical</em> scroll.</h2></div>
-<p class="lead">Most of what we make lives on a phone. Short vertical films with a hook in the first second, cut for Instagram, TikTok and Shorts.</p></div></div>
+<section class="reels sec" aria-label="Reels"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">02 — Short-form video</p><h2 class="h-xl">{H["reels_h2"]}</h2></div>
+<p class="lead">{H["reels_text"]}</p></div></div>
 <div class="phones" data-group>{phones}</div><div class="wrap reels-cta"><button class="rbtn glass-l" data-dir="-1" aria-label="Previous reels">←</button><button class="rbtn glass-l" data-dir="1" aria-label="Next reels">→</button><a class="btn" href="{IG}" rel="noopener">More on Instagram {ARR}</a></div></section>
 
-<section class="sec" id="services"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">03 — What we make</p><h2 class="h-xl">Five ways<br>to be <em>seen.</em></h2></div>
+<section class="sec" id="services"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">03 — Services</p><h2 class="h-xl">{H["services_h2"]}</h2></div>
 <a class="btn ghost" href="services/index.html">All services {ARR}</a></div>
 <ul class="svc-list">{svc_rows(p)}</ul></div><div class="peek" aria-hidden="true"><img alt=""></div></section>
 
-<section class="sec stack-sec" aria-label="Photography"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">04 — Photos</p><h2 class="h-xl">Frames people<br><em>save.</em></h2></div><a class="btn ghost" href="work.html">Full portfolio {ARR}</a></div>
+<section class="sec stack-sec" aria-label="Photography"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">04 — Photography</p><h2 class="h-xl">{H["photos_h2"]}</h2></div><a class="btn ghost" href="work.html">Full portfolio {ARR}</a></div>
 <div class="stack" data-group>{stack}</div></div></section>
 
-<section class="night sec"><i class="blob b1"></i><i class="blob b2"></i><div class="wrap" style="position:relative"><p class="mono eyebrow">05 — The quiet end of the market</p>
-<h2 class="h-xl">For brands that<br>don't do <em>discounts.</em></h2>
-<p class="lead" style="margin-top:var(--s4)">Fine jewelry, private aviation, yachts, residences. Expensive things are hard to film. Reflections, tight cabins, rooms that have to feel calm. That is the work we like most.</p>
+<section class="night sec"><i class="blob b1"></i><i class="blob b2"></i><div class="wrap" style="position:relative"><p class="mono eyebrow">05 — Luxury brands</p>
+<h2 class="h-xl">{H["lux_h2"]}</h2>
+{"".join(f'<p class="lead" style="margin-top:var(--s3)">{t}</p>' for t in H["lux_text"])}
 <div class="lux-grid">{lux}</div></div></section>
 
 <section class="sec"><div class="wrap proof"><div class="m rv"><video src="media/{F(H['testimonial_video'])}" poster="media/k4.jpg" controls playsinline preload="metadata" aria-label="Client testimonial video"></video></div>
-<div class="rv"><p class="mono eyebrow">06 — In their words</p><h2 class="h-l">The homeowner says it <em>better</em> than we could.</h2>
-<p class="lead" style="margin:var(--s3) 0 var(--s4)">A real client, in her finished kitchen, filmed for a New Jersey remodeler. No script. Just questions, good light and enough time to forget the camera.</p>
-<a class="btn ghost" href="services/testimonial-video-production.html">Testimonial films {ARR}</a></div></div></section>
+<div class="rv"><p class="mono eyebrow">06 — Client stories</p><h2 class="h-l">{H["stories_h2"]}</h2>
+<p class="lead" style="margin:var(--s3) 0 var(--s4)">{H["stories_text"]}</p>
+<a class="btn ghost" href="services/testimonial-video-production.html">Client testimonial videos {ARR}</a></div></div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">07 — How it works</p><h2 class="h-xl" style="margin-bottom:var(--s6)">Planned like<br>a <em>film.</em></h2>
-<div class="steps swipe"><div class="step rv"><span class="mono">01 / Plan</span><h3>One call, one shot list</h3><p>Where it runs, who it is for, what the one shot is. You approve the plan before we arrive.</p></div>
-<div class="step rv"><span class="mono">02 / Shoot</span><h3>Small crew, right light</h3><p>Scheduled around the best light and your hours. Video and photos in the same visit.</p></div>
-<div class="step rv"><span class="mono">03 / Deliver</span><h3>Every screen</h3><p>Graded films, edited photos, and vertical cuts for Reels, Stories and TikTok.</p></div></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">07 — Our process</p><h2 class="h-xl" style="margin-bottom:var(--s6)">{H["process_h2"]}</h2>
+<div class="steps swipe">{steps}</div></div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">08 — Where</p><h2 class="h-xl">Across the <em>river,</em><br>and beyond it.</h2></div></div>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-head"><div><p class="mono eyebrow">08 — Service areas</p><h2 class="h-xl">{H["areas_h2"]}</h2></div></div>
 <div class="areas">{areas}</div></div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">09 — Questions</p>{faq_html(HOME_FAQ)}</div></section>
-''' + closing(p) + foot(p)
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">09 — FAQ</p>{faq_html(HOME_FAQ)}</div></section>
+''' + closing(p, H["cta_h2"], H["cta_text"]) + foot(p)
     write("index.html", s)
 
 # ---------------- SERVICE PAGES ----------------
 def service(sv):
     p = "../"; path = f"/services/{sv['slug']}.html"
     others = "".join(f'<a href="{x["slug"]}.html">{x["name"]}</a>' for x in SERVICES if x is not sv)
-    areas = "".join(f'<a href="../areas/{a["slug"]}.html">{sv["short"]} in {a["name"]}</a>' for a in AREAS)
+    areas = "".join(f'<a href="../areas/{a["slug"]}.html">{a["name"]}</a>' for a in AREAS)
     strip = "".join(f'<div class="m"><img data-par src="{p}media/{f}" alt="{esc(sv["name"])} by Turtle House Productions" loading="lazy"></div>' for f in [sv["img"]]+sv["strip"][:2])
     deliv = "".join(f'<li><b>{esc(a)}</b><span>{esc(b)}</span></li>' for a,b in sv["deliv"])
+    steps = "".join(f'<div class="step rv"><span class="mono">0{i+1} / {esc(x["title"])}</span><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div>' for i,x in enumerate(sv["steps"]))
     svc_schema = {"@context":"https://schema.org","@type":"Service","name":sv["name"],"serviceType":sv["name"],"provider":{"@id":BASE+"/#org"},
                   "areaServed":["New Jersey","New York City","Washington DC"],"description":sv["desc"],"url":BASE+path}
-    s = head(p, sv["title"]+" | Turtle House", sv["desc"], path,
+    s = head(p, sv["title"], sv["desc"], path,
              [ORG, svc_schema, faq_schema(sv["faq"]), crumbs_schema([("Home","/"),("Services","/services/"),(sv["name"],path)])]) + nav(p) + f'''
 <section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / <a href="index.html">Services</a> / {sv["short"]}</p>
-{h1(sv["h1"])}<p class="lead">{sv["lead"]}</p><div class="cta-row"><a class="btn" href="../contact.html">Plan a shoot {ARR}</a><a class="btn ghost" href="tel:{TEL}">{PHONE}</a></div></div></section>
+{h1(sv["h1"])}<p class="lead">{sv["lead"]}</p><div class="cta-row"><a class="btn" href="../contact.html">Start a project {ARR}</a><a class="btn ghost" href="tel:{TEL}">{PHONE}</a></div></div></section>
 <div class="strip">{strip}</div>
-<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">What you get</p><h2 class="h-l">One shoot.<br>Every <em>screen.</em></h2></div><ul class="deliv rv">{deliv}</ul></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Why it works</p></div><div class="prose rv"><h2 class="h-l">{esc(sv["name"])}, <em>done properly.</em></h2>{"".join(f"<p>{esc(b)}</p>" for b in sv["body"])}</div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">How it works</p><div class="steps"><div class="step rv"><span class="mono">01 / Plan</span><h3>Call &amp; shot list</h3><p>We agree where it runs, who it is for and what the hero shot is.</p></div><div class="step rv"><span class="mono">02 / Shoot</span><h3>Small crew</h3><p>Scheduled around the light and your hours, video and photo together.</p></div><div class="step rv"><span class="mono">03 / Deliver</span><h3>Every format</h3><p>Graded, edited and cut for web, listings and social.</p></div></div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">Questions</p>{faq_html(sv["faq"])}</div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">Where we film this</p><div class="related" style="margin-bottom:var(--s5)">{areas}</div><p class="mono eyebrow">Other services</p><div class="related">{others}</div></div></section>
-''' + closing(p) + foot(p)
+<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">Deliverables</p><h2 class="h-l">What we <em>produce.</em></h2></div><ul class="deliv rv">{deliv}</ul></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Why work with us</p></div><div class="prose rv"><h2 class="h-l">{sv["why_h2"]}</h2>{"".join(f"<p>{esc(x)}</p>" for x in sv["body"])}</div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">Our process</p><div class="steps swipe">{steps}</div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">FAQ</p>{faq_html(sv["faq"])}</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">Related services</p><div class="related" style="margin-bottom:var(--s5)">{others}</div><p class="mono eyebrow">Service areas</p><div class="related">{areas}</div></div></section>
+''' + closing(p, sv["cta_h2"], sv["cta_text"]) + foot(p)
     write(f"services/{sv['slug']}.html", s)
 
 def services_index():
     p = "../"
-    s = head(p, "Services | Video Production & Photography NJ, NYC | Turtle House", "Real estate video, luxury brand films, hotel and restaurant content, and client testimonial videos across New Jersey, New York City and DC.", "/services/",
+    rows = "".join(f'<li><a href="{p}services/{s["slug"]}.html" data-img="{p}media/{s["img"]}"><span class="mono n">0{i+1}</span><img class="th" src="{p}media/{s["img"]}" alt="" loading="lazy"><h3>{s["name"]}</h3><p>{s["index_line"]}</p><span class="arr">{ARR}</span></a></li>' for i,s in enumerate(SERVICES))
+    s = head(p, "Video Production & Photography Services | Turtle House", "Explore video production and photography services for real estate, luxury brands, hotels, restaurants and client testimonials in NJ and NYC.", "/services/",
              [ORG, crumbs_schema([("Home","/"),("Services","/services/")])]) + nav(p) + f'''
-<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / Services</p>{h1(["Five ways","to be <em>seen.</em>"])}
-<p class="lead">Every service starts the same way: a plan, a shot list and a clear idea of where the content will live. Pick the one closest to what you need.</p></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><ul class="svc-list">{svc_rows(p)}</ul></div><div class="peek" aria-hidden="true"><img alt=""></div></section>''' + closing(p) + foot(p)
+<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / Services</p>{h1(["Video production","and photography <em>services.</em>"])}
+<p class="lead">We produce video and photography for businesses, properties and hospitality brands. Whether you need a property listing film, a restaurant content shoot or a brand video, every project starts with a conversation about your goals and how the content will be used.</p></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><ul class="svc-list">{rows}</ul></div><div class="peek" aria-hidden="true"><img alt=""></div></section>''' + closing(p, "Let’s talk about<br>your <em>project.</em>", "Share a few details about the location, timing and content you need. We’ll be in touch to discuss the production.") + foot(p)
     write("services/index.html", s)
 
 # ---------------- AREA PAGES ----------------
 def area(a):
     p = "../"; path = f"/areas/{a['slug']}.html"
-    svc = "".join(f'<a href="../services/{x["slug"]}.html">{x["short"]} in {a["name"]}</a>' for x in SERVICES)
     others = "".join(f'<a href="{x["slug"]}.html">{x["name"]}</a>' for x in AREAS if x is not a)
-    faq = [(f"Do you have a crew in {a['name']}?", f"Yes. Our base is Weehawken, NJ, and we work in {a['name']} regularly with the same small crew and plan-first approach."),
-           ("What do you film?", "Real estate, luxury brands, hotels and resorts, restaurants and client testimonials, as video and photography together.")]
+    what = "".join(f'<li><b>{esc(x["title"])}</b><span>{esc(x["text"])}</span></li>' for x in a["what"])
+    svc = "".join(f'<a href="../services/{x["slug"]}.html">{x["name"]}</a>' for x in SERVICES)
+    faq = [(f["q"], f["a"]) for f in a["faq"]]
     s = head(p, a["title"], a["desc"], path, [ORG, faq_schema(faq), crumbs_schema([("Home","/"),("Areas","/areas/"),(a["name"],path)])]) + nav(p) + f'''
 <section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / <a href="index.html">Areas</a> / {a["name"]}</p>
-{h1(a["h1"])}<p class="lead">{a["lead"]}</p><p class="mono" style="margin-top:var(--s3);color:var(--ink-2)">{a["towns"]}</p>
-<div class="cta-row"><a class="btn" href="../contact.html">Plan a shoot {ARR}</a></div></div></section>
-<div class="strip"><div class="m"><img data-par src="{p}media/{a["img"]}" alt="Video production in {esc(a["name"])}" loading="lazy"></div><div class="m"><img data-par src="{p}media/f6.jpg" alt="Restaurant photography" loading="lazy"></div><div class="m"><img data-par src="{p}media/h1.jpg" alt="Hotel video production" loading="lazy"></div></div>
-<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">Local, on purpose</p></div><div class="prose rv">{"".join(f"<p>{esc(b)}</p>" for b in a["body"])}</div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">What we film in {a["name"]}</p><div class="related" style="margin-bottom:var(--s6)">{svc}</div>{faq_html(faq)}
-<p class="mono eyebrow" style="margin-top:var(--s6)">Other areas</p><div class="related">{others}</div></div></section>
-''' + closing(p) + foot(p)
+{h1(a["h1"])}<p class="lead">{a["lead"]}</p><p class="lead" style="margin-top:var(--s2)">{a["lead2"]}</p><p class="mono" style="margin-top:var(--s3);color:var(--ink-2)">{a["towns"]}</p>
+<div class="cta-row"><a class="btn" href="../contact.html">Start a project {ARR}</a></div></div></section>
+<div class="strip"><div class="m"><img data-par src="{p}media/{a["img"]}" alt="Video production in {esc(a["name"])}" loading="lazy"></div><div class="m"><img data-par src="{p}media/f6.jpg" alt="Restaurant photography" loading="lazy"></div><div class="m"><img data-par src="{p}media/h1.jpg" alt="Hotel photography" loading="lazy"></div></div>
+<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">Why work with us</p></div><div class="prose rv"><h2 class="h-l">{a["why_h2"]}</h2>{"".join(f"<p>{esc(x)}</p>" for x in a["body"])}</div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Services</p><h2 class="h-l">What we film in {a["name"]}</h2></div><ul class="deliv rv">{what}</ul></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">FAQ</p>{faq_html(faq)}
+<p class="mono eyebrow" style="margin-top:var(--s6)">Services</p><div class="related" style="margin-bottom:var(--s5)">{svc}</div><p class="mono eyebrow">Other service areas</p><div class="related">{others}</div></div></section>
+''' + closing(p, a["cta_h2"], a["cta_text"]) + foot(p)
     write(f"areas/{a['slug']}.html", s)
 
 def areas_index():
     p = "../"
-    cards = "".join(f'<a class="area rv" href="{a["slug"]}.html"><span class="mono">0{i+1}</span><h3>{a["name"]}</h3><p>{a["towns"]}</p></a>' for i,a in enumerate(AREAS))
-    s = head(p, "Areas We Serve | New Jersey, NYC, Washington DC | Turtle House", "Video and photo production across New Jersey, New York City and Washington DC from our base in Weehawken, NJ.", "/areas/",
-             [ORG]) + nav(p) + f'''<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / Areas</p>{h1(["Across the <em>river,</em>","and beyond it."])}</div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="areas">{cards}</div></div></section>''' + closing(p) + foot(p)
+    cards = "".join(f'<a class="area rv" href="{a["slug"]}.html"><span class="mono">0{i+1}</span><h3>{a["name"]}</h3><p>{a["summary"]}</p></a>' for i,a in enumerate(AREAS))
+    s = head(p, "Service Areas | Video Production in NJ, NYC & DC | Turtle House", "Turtle House Productions is based in Weehawken, NJ, providing video production and photography across New Jersey and New York City, with selected projects in DC.", "/areas/",
+             [ORG]) + nav(p) + f'''<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / Areas</p>{h1(["Video production across","New Jersey and New York <em>City.</em>"])}
+<p class="lead">Turtle House Productions is based in Weehawken, New Jersey, just across the Hudson River from Manhattan. We work with businesses, property professionals and hospitality brands throughout the region, and travel for selected projects farther afield.</p></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="areas">{cards}</div></div></section>''' + closing(p, "Planning a shoot<br>in the <em>area?</em>", "Get in touch with the location, project type and timing.") + foot(p)
     write("areas/index.html", s)
 
 # ---------------- WORK / ABOUT / CONTACT ----------------
 def work():
     p = ""
     figs = "".join(f'<figure data-c="{c}" class="rv">{media_tag(p,f,cap)}</figure>' for f,c,cap in WORK)
-    btn = "".join(f'<button data-f="{k}" class="{"on" if k=="all" else ""}">{t}</button>' for k,t in [("all","All"),("homes","Homes & interiors"),("hotels","Hotels & resorts"),("food","Restaurants"),("set","On set")])
-    s = head(p, "Work | Video & Photography Portfolio | Turtle House Productions", "Selected video and photography by Turtle House Productions: homes and interiors, hotels and resorts, restaurants, and behind the scenes.", "/work.html", [ORG]) + nav(p) + f'''
-<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / Work</p>{h1(["Proof, not","<em>promises.</em>"])}<div class="filter" style="margin-top:var(--s5)">{btn}</div></div></section>
-<div class="masonry" data-group>{figs}</div>''' + closing(p) + foot(p)
+    btn = "".join(f'<button data-f="{k}" class="{"on" if k=="all" else ""}">{t}</button>' for k,t in [("all","All"),("homes","Real estate"),("hotels","Hotels & resorts"),("food","Restaurants"),("set","Behind the scenes")])
+    s = head(p, "Video & Photography Portfolio | Turtle House Productions", "Explore selected real estate, hospitality, restaurant, brand and testimonial video and photography projects by Turtle House Productions.", "/work.html", [ORG]) + nav(p) + f'''
+<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / Work</p>{h1(["Selected video","and photography <em>projects.</em>"])}<p class="lead">A selection of our work across real estate, hospitality, restaurants and brands. Each project is shaped around the subject, location and intended audience.</p><div class="filter" style="margin-top:var(--s5)">{btn}</div></div></section>
+<div class="masonry" data-group>{figs}</div>''' + closing(p, "Have a project you’d like<br>us to <em>film?</em>", "Tell us what you have in mind and where the shoot will take place.", ("View our services", "services/index.html")) + foot(p)
     write("work.html", s)
 
 def about():
     p = ""
-    s = head(p, "About | Turtle House Productions, Weehawken NJ", "Turtle House Productions is a video and photography studio in Weehawken, NJ, making films for places and brands across New Jersey, New York and DC.", "/about.html", [ORG]) + nav(p) + f'''
-<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / About</p>{h1(["A small studio","with a <em>big</em> view."])}
-<p class="lead">Turtle House Productions is a video and photography studio based in Weehawken, New Jersey, looking straight at Midtown. We make films and photographs for places and the brands that live in them.</p></div></section>
-<div class="strip"><div class="m"><img data-par src="media/b1.jpg" alt="Turtle House Productions on set" loading="lazy"></div><div class="m"><img data-par src="media/b3.jpg" alt="Behind the scenes" loading="lazy"></div><div class="m"><img data-par src="media/b2.jpg" alt="Camera setup" loading="lazy"></div></div>
-<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">How we think</p><h2 class="h-l">Plan like a film.<br>Deliver like a <em>feed.</em></h2></div>
-<div class="prose rv"><p>Every project starts with where the content will live and who will see it. Then we plan the shots that matter, light them properly and cut them for every screen.</p>
-<p>We keep crews small. It is faster, quieter and easier on homeowners, hotel guests and boutique staff. It also means the person who plans your shoot is the person on set.</p>
-<p>We are slow about the parts that matter, like light, reflections and the first three seconds, and fast about everything else.</p></div></div></section>''' + closing(p) + foot(p)
+    s = head(p, "About Turtle House Productions | Video Production in NJ & NYC", "Meet Turtle House Productions, a Weehawken-based video and photography studio working with real estate, hospitality businesses and brands across NJ and NYC.", "/about.html", [ORG]) + nav(p) + f'''
+<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / About</p>{h1(["A focused video","and photography <em>studio.</em>"])}
+<p class="lead">Turtle House Productions is an independent video and photography studio based in Weehawken, New Jersey. We work with property professionals, restaurants, hotels and brands across New Jersey and New York City.</p>
+<p class="lead" style="margin-top:var(--s2)">Our work ranges from real estate listing films and food photography to hotel content, brand videos and client stories. We keep production focused, communicate clearly and pay attention to the details that make each project different.</p></div></section>
+<div class="strip"><div class="m"><img data-par src="media/b1.jpg" alt="Turtle House Productions on set" loading="lazy"></div><div class="m"><img data-par src="media/b3.jpg" alt="Behind the scenes on a video shoot" loading="lazy"></div><div class="m"><img data-par src="media/b2.jpg" alt="Camera setup on location" loading="lazy"></div></div>
+<section class="sec"><div class="wrap two"><div><p class="mono eyebrow">How we work</p><h2 class="h-l">A thoughtful approach to every <em>shoot.</em></h2></div>
+<div class="prose rv"><p>We start by understanding what the client needs and where the content will be used. From there, we plan the shots, schedule the production and decide what needs to be captured on location.</p>
+<p>We keep crews small when the project allows. It makes communication simpler and helps us work comfortably in homes, restaurants, hotels and other active spaces.</p>
+<p>We care about lighting, composition, sound and editing—but just as importantly, we want the finished content to feel appropriate for the business and the people behind it.</p></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Process</p><h2 class="h-l">From planning to final <em>delivery.</em></h2></div>
+<div class="prose rv"><p>Every project has a clear production plan. We coordinate the shoot with the client, capture the agreed video and photography, then edit and prepare the final files for the intended platforms.</p></div></div></section>''' + closing(p, "Let’s talk about what<br>you’re <em>working on.</em>", "Share a little about your business and the project you have in mind.") + foot(p)
     write("about.html", s)
 
 def contact():
     p = ""
-    s = head(p, "Contact | Book a Shoot | Turtle House Productions", f"Book video or photo production in New Jersey, NYC or DC. Call {PHONE} or email {EMAIL}.", "/contact.html", [ORG]) + nav(p) + f'''
-<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / Contact</p>{h1(["Tell us about","the <em>place.</em>"])}
-<p class="lead">The place, the date you have in mind and where the content will run. We reply with a plan and a quote.</p></div></section>
+    s = head(p, "Contact Turtle House Productions | Book a Video Shoot", f"Contact Turtle House Productions to discuss video production or photography in New Jersey, New York City or Washington, DC. Call {PHONE} or email us.", "/contact.html", [ORG]) + nav(p) + f'''
+<section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="index.html">Home</a> / Contact</p>{h1(["Tell us about","your <em>project.</em>"])}
+<p class="lead">What are you looking to create? Share the location, your preferred timing and the type of video or photography you need. We’ll get back to you to discuss the project and provide a quote.</p></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap two"><div class="contact-grid" style="grid-template-columns:1fr;margin-top:0;border:0;padding:0">
-<div><span class="mono">Call</span><a href="tel:{TEL}">{PHONE}</a></div><div><span class="mono">Write</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span class="mono">Studio</span><span>Weehawken, NJ</span></div></div>
+<div><span class="mono">Phone</span><a href="tel:{TEL}">{PHONE}</a></div><div><span class="mono">Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span class="mono">Studio location</span><span>Weehawken, NJ</span></div></div>
 <form class="form" action="mailto:{EMAIL}" method="post" enctype="text/plain"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input type="email" name="email" required autocomplete="email"></label>
-<label>What are we filming?<select name="type"><option>Real estate</option><option>Luxury brand</option><option>Hotel or resort</option><option>Restaurant</option><option>Testimonial</option><option>Something else</option></select></label>
-<label>Tell us more<textarea name="message"></textarea></label><button class="btn" type="submit">Send {ARR}</button><p class="note">Opens your email app. Or call {PHONE}.</p></form></div></section>''' + foot(p)
+<label>Project type<select name="type"><option>Real estate</option><option>Luxury brand</option><option>Hotel or resort</option><option>Restaurant</option><option>Client testimonial</option><option>Other</option></select></label>
+<label>Tell us about your project<textarea name="message"></textarea></label><button class="btn" type="submit">Send project inquiry {ARR}</button><p class="note">Prefer email? Write to {EMAIL}. You can also call us at {PHONE}.</p></form></div></section>''' + foot(p)
     write("contact.html", s)
 
 def seo_files():

@@ -3,56 +3,178 @@
     {
       "slug": "new-jersey",
       "name": "New Jersey",
-      "towns": "Jersey City · Hoboken · Weehawken · Edgewater · Fort Lee · Hudson & Bergen County",
-      "title": "Video Production Company in New Jersey | Jersey City, Hoboken, Weehawken",
-      "desc": "Turtle House Productions is a video and photo production company based in Weehawken, NJ, serving Jersey City, Hoboken, Edgewater and North Jersey.",
+      "towns": "Jersey City · Hoboken · Weehawken · Edgewater · Fort Lee · Hudson County · Bergen County",
+      "title": "New Jersey Video Production Company | Turtle House Productions",
+      "desc": "Video production and photography in Jersey City, Hoboken, Weehawken, Edgewater and North Jersey. Turtle House Productions is based in Weehawken, NJ.",
       "h1": [
-        "Video production,",
-        "from <em>across</em>",
-        "the river."
+        "Video production",
+        "in New <em>Jersey.</em>"
       ],
-      "lead": "We are based in Weehawken, minutes from Hoboken, Jersey City and the Lincoln Tunnel. That means North Jersey clients get a local crew, and Manhattan is one tunnel away.",
+      "lead": "Turtle House Productions is a video production and photography studio based in Weehawken, NJ. We work with real estate professionals, restaurants, hotels and brands across Hudson County, Bergen County and the surrounding area.",
       "body": [
-        "Hudson County has changed fast. Waterfront towers, new restaurants in Jersey City and Hoboken, and remodeled brownstones all compete for the same attention as Manhattan. We shoot real estate, restaurants, hotels and brands here every week.",
-        "Being local means we can scout before the shoot, come back for golden hour, and plan around the skyline view that half of the waterfront is selling."
+        "Being based in Weehawken makes it practical for us to work throughout the Hudson County waterfront and nearby North Jersey communities. We can coordinate location visits, plan around access and schedule shoots around the needs of each property or business."
       ],
-      "img": "media/k5.jpg"
+      "img": "media/k5.jpg",
+      "summary": "Based in Weehawken, serving Jersey City, Hoboken, Edgewater, Fort Lee and surrounding Hudson and Bergen County communities.",
+      "lead2": "From property listing videos to restaurant photography and brand content, we plan each shoot around the location, the people involved and how the final content will be used.",
+      "why_h2": "A local production partner in Hudson <em>County.</em>",
+      "what": [
+        {
+          "title": "Real estate",
+          "text": "Listing videos, property photography, agent videos and drone footage where permitted."
+        },
+        {
+          "title": "Restaurants",
+          "text": "Food photography, menu shoots, restaurant videos and social media content."
+        },
+        {
+          "title": "Hotels & hospitality",
+          "text": "Hotel photography, property films, room content and hospitality marketing videos."
+        },
+        {
+          "title": "Brands",
+          "text": "Product videos, campaign photography and content for premium brands."
+        },
+        {
+          "title": "Client testimonials",
+          "text": "Customer interviews and project stories for remodelers, builders, designers and service businesses."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Are you based in New Jersey?",
+          "a": "Yes. Turtle House Productions is based in Weehawken, New Jersey."
+        },
+        {
+          "q": "Which New Jersey areas do you serve?",
+          "a": "We work in Weehawken, Hoboken, Jersey City, Edgewater, Fort Lee and surrounding Hudson and Bergen County communities. Contact us if your project is elsewhere in New Jersey."
+        },
+        {
+          "q": "What types of projects do you film?",
+          "a": "We produce real estate videos and photography, restaurant and food content, hotel and resort films, luxury brand content and client testimonial videos."
+        },
+        {
+          "q": "Do you also work in New York City?",
+          "a": "Yes. We work across Manhattan, Brooklyn, Queens and Long Island City."
+        }
+      ],
+      "cta_h2": "Need a video production team in New <em>Jersey?</em>",
+      "cta_text": "Tell us about your project and where it will take place."
     },
     {
       "slug": "new-york-city",
       "name": "New York City",
       "towns": "Manhattan · Brooklyn · Queens · Long Island City",
-      "title": "NYC Video Production Company | Luxury, Real Estate, Hospitality",
-      "desc": "Video production and photography in Manhattan, Brooklyn and Queens for luxury brands, real estate, hotels and restaurants. Turtle House Productions.",
+      "title": "NYC Video Production Company | Turtle House Productions",
+      "desc": "Video production and photography in Manhattan, Brooklyn, Queens and Long Island City for real estate, restaurants, hotels and brands.",
       "h1": [
-        "New York,",
-        "filmed like it",
-        "<em>costs</em> what it does."
+        "Video production",
+        "and photography in",
+        "New York <em>City.</em>"
       ],
-      "lead": "Manhattan clients expect a crew that knows the city: building access, loading docks, permits and how the light falls between towers. We work across Manhattan, Brooklyn and Queens from our base just across the Hudson.",
+      "lead": "Turtle House Productions works with businesses and property professionals across New York City. Based in Weehawken, New Jersey, we are just across the Hudson from Manhattan and available for projects throughout Manhattan, Brooklyn and Queens.",
       "body": [
-        "In New York the bar is set by the best brands in the world. Jewelry houses on Fifth Avenue, hotels in SoHo and residences on Billionaires' Row all live in the same feed as your work. We shoot for that standard.",
-        "We plan around the city: building management, freight elevators, street permits where they are needed, and the hours when a space is quiet."
+        "Every New York location comes with its own logistics. Building access, freight elevators, loading areas, permits and scheduling can all affect a shoot. We discuss these details in advance and coordinate with the client or property team before production."
       ],
-      "img": "media/h4.jpg"
+      "img": "media/h4.jpg",
+      "summary": "Available for projects in Manhattan, Brooklyn, Queens and Long Island City.",
+      "lead2": "We produce real estate videos, restaurant content, hotel photography, brand films and client testimonial videos.",
+      "why_h2": "Production planned for New York <em>locations.</em>",
+      "what": [
+        {
+          "title": "Real estate",
+          "text": "Listing films, interior photography, agent videos and permitted drone footage."
+        },
+        {
+          "title": "Restaurants",
+          "text": "Food and menu photography, restaurant Reels, interior images and launch content."
+        },
+        {
+          "title": "Hotels & hospitality",
+          "text": "Property films, room photography, amenities and social media content."
+        },
+        {
+          "title": "Luxury brands",
+          "text": "Product films and photography for jewelry, watches, aviation, yachts and premium brands."
+        },
+        {
+          "title": "Client testimonials",
+          "text": "Interview-led customer stories and project videos for service businesses."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you work in New York City?",
+          "a": "Yes. We work across Manhattan, Brooklyn, Queens and Long Island City from our base in Weehawken, New Jersey."
+        },
+        {
+          "q": "What types of projects do you film in NYC?",
+          "a": "Our services include real estate video and photography, restaurant content, hotel and resort production, luxury brand films and client testimonial videos."
+        },
+        {
+          "q": "Can you film in occupied buildings or businesses?",
+          "a": "This depends on the property’s access rules and schedule. We coordinate with the client or building management in advance to confirm the arrangements."
+        },
+        {
+          "q": "Do you also serve New Jersey?",
+          "a": "Yes. Our studio is based in Weehawken, and we work throughout Hudson County, Bergen County and nearby areas."
+        }
+      ],
+      "cta_h2": "Planning a shoot in New York <em>City?</em>",
+      "cta_text": "Tell us about the location, the project and your preferred dates."
     },
     {
       "slug": "washington-dc",
-      "name": "Washington DC",
-      "towns": "Washington DC · Georgetown · Northern Virginia",
-      "title": "Video Production in Washington DC | Turtle House Productions",
-      "desc": "Turtle House Productions films real estate, hospitality and brand content in Washington DC, Georgetown and Northern Virginia.",
+      "name": "Washington, DC",
+      "towns": "Washington, DC · Georgetown · Northern Virginia",
+      "title": "Video Production in Washington, DC | Turtle House Productions",
+      "desc": "Video production and photography for real estate, hospitality and brands in Washington, DC, Georgetown and Northern Virginia. Contact Turtle House Productions about your project.",
       "h1": [
-        "Washington DC,",
-        "on the",
-        "<em>same</em> standard."
+        "Video production",
+        "in Washington, <em>DC.</em>"
       ],
-      "lead": "We travel to DC and Northern Virginia for real estate, hospitality and brand work, with the same crew and the same plan-first approach we use in New York.",
+      "lead": "Turtle House Productions is based in Weehawken, New Jersey, and travels to Washington, DC and Northern Virginia for selected production projects. We create video and photography for real estate, hospitality businesses and brands.",
       "body": [
-        "DC projects are often planned weeks ahead around events and access, so we scout remotely, confirm locations early and arrive with a shot list that is already approved.",
-        "Clients who work in both New York and DC get one consistent look across both markets."
+        "For projects outside our home market, we coordinate the schedule, location access and production requirements ahead of time. This helps keep the shoot organized and ensures everyone is clear on the plan before the crew arrives."
       ],
-      "img": "media/r2.jpg"
+      "img": "media/r2.jpg",
+      "summary": "Available for selected projects in Washington, DC, Georgetown and Northern Virginia. Travel and production details are arranged in advance.",
+      "lead2": "If you are planning a project in the DC area, contact us with the location, schedule and type of content you need so we can discuss availability and production logistics.",
+      "why_h2": "Production planned in <em>advance.</em>",
+      "what": [
+        {
+          "title": "Real estate",
+          "text": "Property videos, interior photography and marketing content."
+        },
+        {
+          "title": "Hospitality",
+          "text": "Hotel, restaurant and venue photography and video."
+        },
+        {
+          "title": "Brand content",
+          "text": "Product films, campaign photography and business content."
+        },
+        {
+          "title": "Client testimonials",
+          "text": "Customer interviews and project stories for service businesses."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you have a studio in Washington, DC?",
+          "a": "No. Our studio is based in Weehawken, New Jersey. We travel to Washington, DC and Northern Virginia for selected projects."
+        },
+        {
+          "q": "What types of projects do you take on in DC?",
+          "a": "We can discuss real estate, hospitality, brand and client testimonial projects. Availability depends on the project scope and schedule."
+        },
+        {
+          "q": "How do we arrange a shoot?",
+          "a": "Contact us with the project location, preferred dates and a brief description of the content you need. We will confirm whether the project is a fit and discuss the next steps."
+        }
+      ],
+      "cta_h2": "Have a project in the DC <em>area?</em>",
+      "cta_text": "Get in touch to discuss the location, schedule and production needs."
     }
   ]
 }

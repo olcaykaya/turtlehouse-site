@@ -1,92 +1,150 @@
 {
   "hero_lines": [
-    "Places that",
-    "<em>look</em> like what",
-    "they cost."
+    "Video production",
+    "and photography",
+    "for <em>places,</em> spaces",
+    "and brands."
   ],
-  "hero_lead": "Video, reels and photography for homes, hotels, restaurants and luxury brands across New Jersey and New York.",
+  "hero_lead": "Turtle House Productions is a video and photography studio based in Weehawken, New Jersey. We create visual content for real estate, restaurants, hotels, hospitality businesses and brands across New Jersey and New York City.",
   "hero_video": "media/v_resort.mp4",
   "hero_video_mobile": "media/reels/reel1.mp4",
   "hero_poster": "media/r2.jpg",
-  "statement": "A listing gets three seconds. A hotel gets one scroll. A jewelry brand gets <em>one</em> glance. We build the frame that earns the next one.",
+  "statement": "From the first shot to the final edit, we make content that helps people <em>understand</em> the space, the experience and the work behind a business.",
   "film_video": "media/v_kitchen.mp4",
-  "film_caption": "Kitchen film · New Jersey",
+  "film_caption": "Kitchen video | New Jersey",
   "testimonial_video": "media/v_testimonial.mp4",
   "reels": [
     {
       "video": "media/reels/reel1.mp4",
       "poster": "media/reels/reel1.jpg",
-      "caption": "Butterfly VFX · Resort"
+      "caption": "Resort video | Visual effects"
     },
     {
       "video": "media/reels/reel2.mp4",
       "poster": "media/reels/reel2.jpg",
-      "caption": "Glass fish · Resort"
+      "caption": "Resort video | Pool and atmosphere"
     },
     {
       "video": "media/reels/reel3.mp4",
       "poster": "media/reels/reel3.jpg",
-      "caption": "Atmosphere · Resort"
+      "caption": "Resort video | Details and atmosphere"
     },
     {
       "video": "media/reels/reel4.mp4",
       "poster": "media/reels/reel4.jpg",
-      "caption": "Flowers · Restaurant"
+      "caption": "Restaurant video | Food and setting"
     },
     {
       "video": "media/reels/reel5.mp4",
       "poster": "media/reels/reel5.jpg",
-      "caption": "The glass · Bar"
+      "caption": "Bar video | Drinks and atmosphere"
     },
     {
       "video": "media/reels/reel6.mp4",
       "poster": "media/reels/reel6.jpg",
-      "caption": "Raw cut · Resort"
+      "caption": "Resort video | Behind the scenes"
     }
   ],
   "photos": [
     {
       "image": "media/k5.jpg",
-      "title": "Homes & interiors",
-      "text": "Listings, remodels, finished kitchens"
+      "title": "Real estate & interiors",
+      "text": "Property listings, finished kitchens, renovations and interior spaces."
     },
     {
       "image": "media/h1.jpg",
       "title": "Hotels & resorts",
-      "text": "Rooms, lobbies, the stay itself"
+      "text": "Guest rooms, suites, lobbies, amenities and shared spaces."
     },
     {
       "image": "media/f2.jpg",
-      "title": "Restaurants",
-      "text": "Plates, pours, the room at night"
+      "title": "Restaurants & bars",
+      "text": "Food, drinks, interiors and the atmosphere of the space."
     },
     {
       "image": "media/r1.jpg",
-      "title": "Resorts",
-      "text": "Light, water, slow mornings"
+      "title": "Resorts & outdoor spaces",
+      "text": "Pools, landscapes, waterfront views and the details that shape the guest experience."
     },
     {
       "image": "media/f6.jpg",
-      "title": "Food",
-      "text": "Every dish, lit like the table"
+      "title": "Food & menu photography",
+      "text": "Clear, carefully lit images for menus, websites and social media."
     }
   ],
   "faq": [
     {
       "q": "What does Turtle House Productions do?",
-      "a": "We produce video and photography for real estate, luxury brands, hotels, restaurants and service businesses, from planning and filming to edit, color and social cuts."
+      "a": "Turtle House Productions provides video production and photography for real estate, restaurants, hotels, luxury brands and service businesses. Services include planning, filming, photography, editing and social media versions."
     },
     {
-      "q": "Where are you based?",
-      "a": "Weehawken, New Jersey, across the Hudson from Midtown Manhattan. We work across New Jersey, New York City and Washington DC."
+      "q": "Where is Turtle House Productions based?",
+      "a": "Our studio is based in Weehawken, New Jersey, just across the Hudson River from Manhattan. We work throughout New Jersey and New York City, and travel for selected projects in Washington, DC and Northern Virginia."
     },
     {
-      "q": "Do you post prices on the site?",
-      "a": "No. Every project is different, so we quote after a short call about what you need, where and when."
+      "q": "Which areas in New Jersey and New York do you serve?",
+      "a": "We work in Jersey City, Hoboken, Weehawken, Edgewater, Fort Lee and other parts of Hudson and Bergen County, as well as Manhattan, Brooklyn, Queens and Long Island City."
     },
     {
-      "q": "How do we start?",
-      "a": "Call or email us with the place, the date you have in mind and where the content will run. We reply with a plan and a quote."
+      "q": "Do you offer both video and photography?",
+      "a": "Yes. Depending on the project, we can plan and capture video and photography during the same production visit."
+    },
+    {
+      "q": "How much does a video or photography project cost?",
+      "a": "Pricing depends on the location, production requirements, number of deliverables and intended use. Get in touch with a few details about your project and we’ll prepare a quote."
+    },
+    {
+      "q": "How do we get started?",
+      "a": "Send us the project location, the type of content you need and your preferred timing. We’ll follow up to discuss the scope and next steps."
     }
-  ]
+  ],
+  "seo_title": "Turtle House Productions | Video Production in NJ & NYC",
+  "seo_desc": "Video production and photography for real estate, restaurants, hotels and brands in New Jersey and New York City. Based in Weehawken, NJ.",
+  "reels_h2": "Video made for<br><em>social media.</em>",
+  "reels_text": "Most people will see your content on a phone. We create short-form videos for Instagram Reels, TikTok and YouTube Shorts, with thoughtful framing, strong opening shots and editing that fits each platform.",
+  "services_h2": "Video and photography<br>for your <em>business.</em>",
+  "photos_h2": "Photography that<br>shows the <em>details.</em>",
+  "lux_h2": "Video and photography<br>for <em>premium</em> brands.",
+  "lux_text": [
+    "We create films and photography for fine jewelry, watches, private aviation, yachts and high-end residential properties. These projects call for careful lighting, attention to detail and a considered approach to every shot.",
+    "Whether we’re filming a jewelry collection, an aircraft interior or a private residence, the goal is the same: present the subject at its best without making the work feel overproduced."
+  ],
+  "lux_items": [
+    {
+      "title": "Fine jewelry & watches",
+      "text": "Product films and photography for collections, boutiques, launches and private viewings. We pay close attention to reflections, materials and the details that make each piece distinctive."
+    },
+    {
+      "title": "Private aviation",
+      "text": "Aircraft interiors, exterior details and airport or ramp footage for charter companies, operators and aviation brands. All filming is planned with the relevant operator and facility."
+    },
+    {
+      "title": "Luxury homes & developments",
+      "text": "Property films and photography for distinctive homes, residential developments and real estate marketing."
+    },
+    {
+      "title": "Yachts & private clubs",
+      "text": "On-water footage, interiors, amenities and event coverage for yacht and private-club businesses."
+    }
+  ],
+  "stories_h2": "Hear it from the people who <em>know</em> the work.",
+  "stories_text": "A finished project is important. Hearing directly from the person who experienced it can be just as valuable. We film relaxed, interview-led client stories that let homeowners and customers explain the process in their own words.",
+  "process_h2": "A clear plan from<br>start to <em>finish.</em>",
+  "steps": [
+    {
+      "title": "Plan",
+      "text": "We discuss your goals, audience, location and where the content will be used. Then we prepare a shot list and production plan for your approval."
+    },
+    {
+      "title": "Film",
+      "text": "We arrive with a focused crew and a clear plan. When possible, we capture video and photography during the same visit and schedule around the location, people and available light."
+    },
+    {
+      "title": "Edit & deliver",
+      "text": "We edit the footage, color-grade the videos, prepare the photographs and export the formats you need for your website, listings and social media."
+    }
+  ],
+  "areas_h2": "Based in New Jersey.<br>Working across the <em>region.</em>",
+  "cta_h2": "Have a project<br>in <em>mind?</em>",
+  "cta_text": "Tell us what you are looking to create. We’ll help you plan the shoot."
 }
