@@ -2,7 +2,7 @@
 """Turtle House site generator. Edit the CONTENT below, run `python3 build.py`, done.
 Photos/videos: drop files into /media and change the file names here."""
 import json, os, html, re, shutil
-BASE = "https://www.turtlehouseproductions.com"
+BASE = "https://turtlehouseproductions.com"
 PHONE, TEL, EMAIL, IG = "407 470 9303", "+14074709303", "hi@turtlehouseproductions.com", "https://instagram.com/turtlehouseprod"
 SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SRC, "dist")
