@@ -346,10 +346,17 @@ def contact():
 <p class="lead">What are you looking to create? Share the location, your preferred timing and the type of video or photography you need. We’ll get back to you to discuss the project and provide a quote.</p></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap two"><div class="contact-grid" style="grid-template-columns:1fr;margin-top:0;border:0;padding:0">
 <div><span class="mono">Phone</span><a href="tel:{TEL}">{PHONE}</a></div><div><span class="mono">Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span class="mono">Studio location</span><span>Weehawken, NJ</span></div></div>
-<form class="form" action="mailto:{EMAIL}" method="post" enctype="text/plain"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input type="email" name="email" required autocomplete="email"></label>
+<form class="form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company"><input type="hidden" name="form-name" value="contact"><p hidden><label>Company<input name="company"></label></p><label>Name<input name="name" required autocomplete="name"></label><label>Email<input type="email" name="email" required autocomplete="email"></label><label>Phone (optional)<input type="tel" name="phone" autocomplete="tel"></label>
 <label>Project type<select name="type"><option>Real estate</option><option>Luxury brand</option><option>Hotel or resort</option><option>Restaurant</option><option>Client testimonial</option><option>Other</option></select></label>
 <label>Tell us about your project<textarea name="message"></textarea></label><button class="btn" type="submit">Send project inquiry {ARR}</button><p class="note">Prefer email? Write to {EMAIL}. You can also call us at {PHONE}.</p></form></div></section>''' + foot(p)
     write("contact.html", s)
+
+def thanks():
+    p = ""
+    s = head(p, "Thank you | Turtle House Productions", "Your message has been sent.", "/thanks.html", [ORG]).replace('<link rel="canonical"','<meta name="robots" content="noindex"><link rel="canonical"') + nav(p) + f'''
+<section class="page-hero"><div class="wrap">{h1(["Thank you.","We got your <em>message.</em>"])}<p class="lead">We’ll get back to you shortly to talk about your project. If it’s urgent, call us at {PHONE}.</p>
+<div class="cta-row"><a class="btn" href="work.html">View our work {ARR}</a><a class="btn ghost" href="index.html">Back to home</a></div></div></section>''' + foot(p)
+    write("thanks.html", s)
 
 def seo_files():
     urls = ["/","/services/","/areas/","/work.html","/about.html","/contact.html"]+[f"/services/{s['slug']}.html" for s in SERVICES]+[f"/areas/{a['slug']}.html" for a in AREAS]
@@ -357,7 +364,7 @@ def seo_files():
     write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: {BASE}/sitemap.xml\n")
     return len(urls)
 
-home(); services_index(); areas_index(); work(); about(); contact()
+thanks(); home(); services_index(); areas_index(); work(); about(); contact()
 for s in SERVICES: service(s)
 for a in AREAS: area(a)
 for d in ("assets", "media", "admin"):
