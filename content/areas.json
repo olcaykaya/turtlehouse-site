@@ -133,15 +133,19 @@
         "Video production",
         "in Washington, <em>DC.</em>"
       ],
-      "lead": "Turtle House Productions is based in Weehawken, New Jersey, and travels to Washington, DC and Northern Virginia for selected production projects. We create video and photography for real estate, hospitality businesses and brands.",
+      "lead": "Turtle House Productions is based in Weehawken, New Jersey, and travels regularly to Washington, DC and Northern Virginia, most often to film client testimonial videos. We also take on selected real estate, hospitality and brand projects in the area.",
       "body": [
         "For projects outside our home market, we coordinate the schedule, location access and production requirements ahead of time. This helps keep the shoot organized and ensures everyone is clear on the plan before the crew arrives."
       ],
       "img": "media/r2.jpg",
-      "summary": "Available for selected projects in Washington, DC, Georgetown and Northern Virginia. Travel and production details are arranged in advance.",
+      "summary": "Regular trips to Washington, DC and Northern Virginia, mostly for client testimonial videos. Travel and production details are arranged in advance.",
       "lead2": "If you are planning a project in the DC area, contact us with the location, schedule and type of content you need so we can discuss availability and production logistics.",
       "why_h2": "Production planned in <em>advance.</em>",
       "what": [
+        {
+          "title": "Client testimonials",
+          "text": "Customer interviews and project stories for service businesses."
+        },
         {
           "title": "Real estate",
           "text": "Property videos, interior photography and marketing content."
@@ -153,10 +157,6 @@
         {
           "title": "Brand content",
           "text": "Product films, campaign photography and business content."
-        },
-        {
-          "title": "Client testimonials",
-          "text": "Customer interviews and project stories for service businesses."
         }
       ],
       "faq": [
@@ -166,7 +166,7 @@
         },
         {
           "q": "What types of projects do you take on in DC?",
-          "a": "We can discuss real estate, hospitality, brand and client testimonial projects. Availability depends on the project scope and schedule."
+          "a": "Most of our DC work is client testimonial videos. We also discuss real estate, hospitality and brand projects. Availability depends on the project scope and schedule."
         },
         {
           "q": "How do we arrange a shoot?",
