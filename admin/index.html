@@ -1,0 +1,167 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Turtle House Panel</title><meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{background:#f4f1ea}
+:root{--ink:#121212;--mut:#6b675f;--line:rgba(18,18,18,.1);--rec:#ff4a1c;--ok:#1f8a4c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:16px/1.45 "Inter Tight",system-ui,sans-serif;color:var(--ink);padding-bottom:110px}
+header{position:sticky;top:0;z-index:5;background:rgba(244,241,234,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 6px;max-width:900px;margin:0 auto}
+.top b{font-size:18px;letter-spacing:-.02em}.top a{font-size:14px;color:var(--mut)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:8px 16px 12px;max-width:900px;margin:0 auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:0;font:inherit;font-size:15px;padding:10px 16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff}
+main{max-width:900px;margin:0 auto;padding:18px 16px}
+h2{font-size:26px;letter-spacing:-.03em;margin:8px 0 4px}
+.hint{color:var(--mut);font-size:14px;margin-bottom:18px}
+.grp{background:#fff;border-radius:18px;padding:16px;margin-bottom:16px;box-shadow:0 1px 0 var(--line)}
+.grp>h3{font-size:17px;margin-bottom:12px}
+label.f{display:block;font-size:13px;color:var(--mut);margin:12px 0 6px}
+input.t,textarea.t{width:100%;font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#faf9f6}
+textarea.t{min-height:90px;resize:vertical}
+input.t:focus,textarea.t:focus{outline:2px solid var(--ink);border-color:transparent}
+.media{position:relative;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:16/10}
+.media.v916{aspect-ratio:9/16;max-height:420px;margin:0 auto}
+.media img,.media video{width:100%;height:100%;object-fit:cover;display:block}
+.media .new{position:absolute;top:10px;left:10px;background:var(--rec);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.b{border:0;font:inherit;font-size:15px;font-weight:500;padding:12px 16px;border-radius:12px;cursor:pointer;background:#efece5;color:var(--ink)}
+.b.main{background:var(--ink);color:#fff;flex:1}
+.b.del{color:#b3261e}
+.b:active{transform:scale(.97)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+@media(max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:10px}.item{padding:8px}.item .b{padding:10px 12px;font-size:14px}.item .b.main{flex-basis:100%}}
+.item{background:#fff;border-radius:18px;padding:12px;box-shadow:0 1px 0 var(--line)}
+.add{width:100%;border:2px dashed rgba(18,18,18,.2);background:transparent;border-radius:18px;padding:22px;font:inherit;font-size:16px;font-weight:500;cursor:pointer;color:var(--mut)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(244,241,234,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+.bar .in{max-width:900px;margin:0 auto;display:flex;gap:10px;align-items:center}
+.bar .msg{flex:1;font-size:14px;color:var(--mut)}
+.pub{border:0;font:inherit;font-size:17px;font-weight:600;padding:15px 26px;border-radius:999px;background:var(--rec);color:#fff;cursor:pointer}
+.pub:disabled{background:#cfcac0;cursor:default}
+.login{max-width:440px;margin:12vh auto;padding:0 20px}
+.login h1{font-size:34px;letter-spacing:-.04em;margin-bottom:10px}
+.login ol{margin:14px 0 18px 20px;color:var(--mut);font-size:15px}.login li{margin-bottom:6px}
+.login a{color:var(--ink)}
+.toast{position:fixed;left:50%;top:18px;transform:translateX(-50%);z-index:9;background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.on{opacity:1}
+.svc-pick{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.svc-pick button{border:0;font:inherit;font-size:14px;padding:9px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);cursor:pointer}
+.svc-pick button.on{background:var(--ink);color:#fff}
+</style></head><body>
+<div id="app"></div><div class="toast" id="toast"></div>
+<script>
+const REPO='olcaykaya/turtlehouse-site',BR='main',API='https://api.github.com/repos/'+REPO;
+const FILES=['home','work','services','areas','site'];
+let TOKEN='';try{TOKEN=localStorage.getItem('th-token')||''}catch(e){}
+let C={},orig={},pending={},tab='giris',svcIdx=0; // pending: path -> {blob:Blob,url}
+const $=s=>document.querySelector(s),app=$('#app');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2600)}
+async function gh(path,opt={}){const r=await fetch(API+path,{...opt,headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github+json',...(opt.headers||{})}});if(!r.ok)throw new Error(r.status+' '+(await r.text()).slice(0,140));return r.json()}
+const src=p=>pending[p]?pending[p].url:'/'+String(p||'').replace(/^\/+/,'');
+const isVid=p=>/\.(mp4|mov|webm)$/i.test(p||'');
+
+/* ---------- login ---------- */
+function login(err){app.innerHTML=`<div class="login"><h1>Turtle House<br>Panel</h1>
+<p class="hint">Bir kere giriş yapman yeterli, bu cihaz hatırlar.</p>
+<ol><li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Bu linke</a> git (GitHub).</li>
+<li>Ad: <b>panel</b> · Expiration: <b>1 year</b> · Repository access: <b>Only select → turtlehouse-site</b></li>
+<li>Permissions → Repository → <b>Contents: Read and write</b></li>
+<li><b>Generate token</b>'a bas, çıkan kodu kopyala ve aşağı yapıştır.</li></ol>
+<input class="t" id="tk" placeholder="github_pat_..." autocomplete="off"><div class="row"><button class="b main" id="go">Giriş</button></div>
+${err?`<p class="hint" style="color:#b3261e;margin-top:12px">${esc(err)}</p>`:''}</div>`;
+$('#go').onclick=()=>{TOKEN=$('#tk').value.trim();try{localStorage.setItem('th-token',TOKEN)}catch(e){}load()}}
+
+async function load(){if(!TOKEN)return login();app.innerHTML='<main><p class="hint">Yükleniyor…</p></main>';
+ try{for(const f of FILES){const r=await fetch(API+'/contents/content/'+f+'.json?ref='+BR+'&t='+Date.now(),{headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github.raw+json'}});if(!r.ok)throw new Error(r.status===401?'Kod geçersiz ya da süresi dolmuş.':'Okunamadı ('+r.status+')');C[f]=await r.json()}
+ orig=JSON.parse(JSON.stringify(C));render()}catch(e){try{localStorage.removeItem('th-token')}catch(_){}TOKEN='';login(e.message)}}
+
+/* ---------- helpers ---------- */
+const dirty=()=>Object.keys(pending).length+FILES.filter(f=>JSON.stringify(C[f])!==JSON.stringify(orig[f])).length;
+function upd(){const n=dirty(),b=$('.pub');if(b){b.disabled=!n;b.textContent=n?'Yayınla':'Yayınla';$('.bar .msg').textContent=n?n+' değişiklik bekliyor':'Değişiklik yok'}}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9.]+/g,'-').replace(/-+/g,'-').slice(-40)}
+async function shrinkImg(file){if(!/^image\/(jpeg|png|webp)/.test(file.type))return file;const bm=await createImageBitmap(file);const k=Math.min(1,2200/Math.max(bm.width,bm.height));const c=document.createElement('canvas');c.width=Math.round(bm.width*k);c.height=Math.round(bm.height*k);c.getContext('2d').drawImage(bm,0,0,c.width,c.height);return await new Promise(r=>c.toBlob(r,'image/jpeg',.86))}
+async function posterOf(url){return new Promise(res=>{const v=document.createElement('video');v.muted=true;v.playsInline=true;v.src=url;v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/3||0)};v.onseeked=()=>{const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);c.toBlob(b=>res(b),'image/jpeg',.82)};v.onerror=()=>res(null)})}
+function pick(accept){return new Promise(r=>{const i=document.createElement('input');i.type='file';i.accept=accept;i.onchange=()=>r(i.files[0]);i.click()})}
+async function choose(kind){ // returns new media path (pending) + optional poster path
+ const f=await pick(kind==='video'?'video/mp4,video/quicktime,video/*':kind==='image'?'image/*':'image/*,video/*');if(!f)return null;
+ const vid=f.type.startsWith('video');if(vid&&f.size>40e6&&!confirm('Bu video '+Math.round(f.size/1e6)+' MB, siteyi yavaşlatır. 15 MB altına küçültmeni öneririm. Yine de yükleyeyim mi?'))return null;
+ const blob=vid?f:await shrinkImg(f);const ext=vid?(f.name.split('.').pop()||'mp4').toLowerCase():'jpg';
+ const base='media/up/'+Date.now().toString(36)+'-'+slug(f.name.replace(/\.[^.]+$/,''));const path=base+'.'+ext;
+ pending[path]={blob,url:URL.createObjectURL(blob)};let poster=null;
+ if(vid){const pb=await posterOf(pending[path].url);if(pb){poster=base+'.jpg';pending[poster]={blob:pb,url:URL.createObjectURL(pb)}}}
+ return{path,poster}}
+function mediaBox(p,v916,po){const m=isVid(p)?`<video src="${esc(src(p))}"${po?` poster="${esc(src(po))}"`:''} muted loop playsinline autoplay></video>`:`<img src="${esc(src(p))}" alt="">`;return `<div class="media${v916?' v916':''}">${m}${pending[p]?'<span class="new">YENİ</span>':''}</div>`}
+
+/* ---------- views ---------- */
+const TABS=[['giris','Giriş'],['reels','Reels'],['foto','Foto kartları'],['portfoy','Portföy'],['hizmet','Hizmet sayfaları'],['bolge','Bölgeler'],['iletisim','İletişim']];
+function text(obj,key,label,area){return `<label class="f">${label}</label>${area?`<textarea class="t" data-k="${key}">${esc(obj[key])}</textarea>`:`<input class="t" data-k="${key}" value="${esc(obj[key])}">`}`}
+function render(){
+ const H=C.home;let h='';
+ if(tab==='giris'){h=`<h2>Giriş ekranı</h2><p class="hint">Siteye girince ilk görünen kısım.</p>
+ <div class="grp"><h3>Video — bilgisayar (yatay)</h3>${mediaBox(H.hero_video)}<div class="row"><button class="b main" data-ch="home.hero_video" data-kind="video">Videoyu değiştir</button></div></div>
+ <div class="grp"><h3>Video — telefon (dikey)</h3>${mediaBox(H.hero_video_mobile,1)}<div class="row"><button class="b main" data-ch="home.hero_video_mobile" data-kind="video">Videoyu değiştir</button></div></div>
+ <div class="grp"><h3>Yazılar</h3><label class="f">Büyük başlık (her satır ayrı, italik için &lt;em&gt;kelime&lt;/em&gt;)</label><textarea class="t" data-lines="home.hero_lines">${esc(H.hero_lines.join('\n'))}</textarea>
+ ${text(H,'hero_lead','Alt yazı',1).replace('data-k=','data-o="home" data-k=')}${text(H,'statement','01 bölümündeki büyük cümle',1).replace('data-k=','data-o="home" data-k=')}</div>
+ <div class="grp"><h3>Açılan büyük video</h3>${mediaBox(H.film_video)}<div class="row"><button class="b main" data-ch="home.film_video" data-kind="video">Değiştir</button></div>${text(H,'film_caption','Video yazısı').replace('data-k=','data-o="home" data-k=')}</div>
+ <div class="grp"><h3>Testimonial videosu</h3>${mediaBox(H.testimonial_video)}<div class="row"><button class="b main" data-ch="home.testimonial_video" data-kind="video">Değiştir</button></div></div>`}
+ if(tab==='reels'){h=`<h2>Reels</h2><p class="hint">Telefon çerçevesindeki dikey videolar. Sıra: oklarla.</p><div class="grid">`+H.reels.map((r,i)=>`<div class="item">${mediaBox(r.video,1,r.poster)}
+ <input class="t" style="margin-top:10px" data-list="home.reels" data-i="${i}" data-k="caption" value="${esc(r.caption)}" placeholder="Alt yazı">
+ <div class="row"><button class="b main" data-ch="home.reels.${i}.video" data-poster="home.reels.${i}.poster" data-kind="video">Değiştir</button><button class="b" data-mv="home.reels" data-i="${i}" data-d="-1">↑</button><button class="b" data-mv="home.reels" data-i="${i}" data-d="1">↓</button><button class="b del" data-rm="home.reels" data-i="${i}">Sil</button></div></div>`).join('')+`</div><div class="row"><button class="add" data-add="reels">+ Reel ekle</button></div>`}
+ if(tab==='foto'){h=`<h2>Foto kartları</h2><p class="hint">Ana sayfada üst üste binen büyük fotoğraflar.</p><div class="grid">`+H.photos.map((r,i)=>`<div class="item">${mediaBox(r.image)}
+ <input class="t" style="margin-top:10px" data-list="home.photos" data-i="${i}" data-k="title" value="${esc(r.title)}" placeholder="Başlık"><input class="t" style="margin-top:8px" data-list="home.photos" data-i="${i}" data-k="text" value="${esc(r.text)}" placeholder="Kısa yazı">
+ <div class="row"><button class="b main" data-ch="home.photos.${i}.image" data-kind="image">Değiştir</button><button class="b" data-mv="home.photos" data-i="${i}" data-d="-1">↑</button><button class="b" data-mv="home.photos" data-i="${i}" data-d="1">↓</button><button class="b del" data-rm="home.photos" data-i="${i}">Sil</button></div></div>`).join('')+`</div><div class="row"><button class="add" data-add="photos">+ Foto ekle</button></div>`}
+ if(tab==='portfoy'){const W=C.work.items,cats={homes:'Ev & iç mekan',hotels:'Otel & resort',food:'Restoran',set:'Set'};h=`<h2>Portföy</h2><p class="hint">Work sayfasındaki tüm foto ve videolar.</p><div class="grid">`+W.map((r,i)=>`<div class="item">${mediaBox(r.file)}
+ <select class="t" style="margin-top:10px" data-list="work.items" data-i="${i}" data-k="category">${Object.entries(cats).map(([k,v])=>`<option value="${k}"${r.category===k?' selected':''}>${v}</option>`).join('')}</select>
+ <input class="t" style="margin-top:8px" data-list="work.items" data-i="${i}" data-k="caption" value="${esc(r.caption)}" placeholder="Yazı">
+ <div class="row"><button class="b main" data-ch="work.items.${i}.file" data-kind="any">Değiştir</button><button class="b" data-mv="work.items" data-i="${i}" data-d="-1">↑</button><button class="b" data-mv="work.items" data-i="${i}" data-d="1">↓</button><button class="b del" data-rm="work.items" data-i="${i}">Sil</button></div></div>`).join('')+`</div><div class="row"><button class="add" data-add="work">+ Foto / video ekle</button></div>`}
+ if(tab==='hizmet'||tab==='bolge'){const L=tab==='hizmet'?C.services.items:C.areas.items,o=tab==='hizmet'?'services.items':'areas.items';svcIdx=Math.min(svcIdx,L.length-1);const s=L[svcIdx];
+  h=`<h2>${tab==='hizmet'?'Hizmet sayfaları':'Bölge sayfaları'}</h2><div class="svc-pick">${L.map((x,i)=>`<button data-svc="${i}" class="${i===svcIdx?'on':''}">${esc(x.short||x.name)}</button>`).join('')}</div>
+  <div class="grp"><h3>Ana foto</h3>${mediaBox(s.img)}<div class="row"><button class="b main" data-ch="${o}.${svcIdx}.img" data-kind="image">Fotoyu değiştir</button></div></div>`+
+  (s.strip?`<div class="grp"><h3>Foto şeridi</h3><div class="grid">${s.strip.map((p,j)=>`<div>${mediaBox(p)}<div class="row"><button class="b main" data-ch="${o}.${svcIdx}.strip.${j}" data-kind="image">Değiştir</button></div></div>`).join('')}</div></div>`:'')+
+  `<div class="grp"><h3>Yazılar</h3><label class="f">Başlık satırları</label><textarea class="t" data-lines="${o}.${svcIdx}.h1">${esc(s.h1.join('\n'))}</textarea>
+  <label class="f">Giriş paragrafı</label><textarea class="t" data-path="${o}.${svcIdx}.lead">${esc(s.lead)}</textarea>
+  ${s.body.map((p,j)=>`<label class="f">Paragraf ${j+1}</label><textarea class="t" data-path="${o}.${svcIdx}.body.${j}">${esc(p)}</textarea>`).join('')}
+  <label class="f">Google başlığı</label><input class="t" data-path="${o}.${svcIdx}.title" value="${esc(s.title)}"><label class="f">Google açıklaması</label><textarea class="t" data-path="${o}.${svcIdx}.desc">${esc(s.desc)}</textarea></div>`}
+ if(tab==='iletisim'){const S=C.site;h=`<h2>İletişim</h2><div class="grp">${['phone','email','instagram'].map(k=>`<label class="f">${{phone:'Telefon',email:'E-posta',instagram:'Instagram linki'}[k]}</label><input class="t" data-path="site.${k}" value="${esc(S[k])}">`).join('')}</div>`}
+ app.innerHTML=`<header><div class="top"><b>Turtle House Panel</b><a href="/" target="_blank">Siteyi aç ↗</a></div><nav class="tabs">${TABS.map(([k,v])=>`<button data-tab="${k}" class="${k===tab?'on':''}">${v}</button>`).join('')}</nav></header><main>${h}</main>
+ <div class="bar"><div class="in"><span class="msg"></span><button class="pub">Yayınla</button></div></div>`;
+ upd()}
+
+/* ---------- state edits ---------- */
+function getP(path){return path.split('.').reduce((o,k)=>o[k],C)}
+function setP(path,v){const ks=path.split('.'),last=ks.pop();ks.reduce((o,k)=>o[k],C)[last]=v}
+app.addEventListener('input',e=>{const t=e.target;
+ if(t.dataset.lines)setP(t.dataset.lines,t.value.split('\n').filter(x=>x.trim()));
+ else if(t.dataset.path)setP(t.dataset.path,t.value);
+ else if(t.dataset.list)getP(t.dataset.list)[+t.dataset.i][t.dataset.k]=t.value;
+ else if(t.dataset.o)C[t.dataset.o][t.dataset.k]=t.value;upd()});
+app.addEventListener('click',async e=>{const t=e.target.closest('button');if(!t)return;const d=t.dataset;
+ if(d.tab){tab=d.tab;svcIdx=0;render();scrollTo(0,0)}
+ if(d.svc){svcIdx=+d.svc;render()}
+ if(d.ch){const r=await choose(d.kind);if(!r)return;setP(d.ch,r.path);if(d.poster&&r.poster)setP(d.poster,r.poster);if(d.ch==='home.hero_video'&&r.poster)C.home.hero_poster=r.poster;render();toast('Seçildi — Yayınla\'ya basınca siteye gider')}
+ if(d.mv){const L=getP(d.mv),i=+d.i,j=i+ +d.d;if(j<0||j>=L.length)return;[L[i],L[j]]=[L[j],L[i]];render()}
+ if(d.rm){if(!confirm('Silinsin mi?'))return;getP(d.rm).splice(+d.i,1);render()}
+ if(d.add){const kind=d.add==='reels'?'video':d.add==='photos'?'image':'any';const r=await choose(kind);if(!r)return;
+  if(d.add==='reels')C.home.reels.unshift({video:r.path,poster:r.poster||'',caption:''});
+  if(d.add==='photos')C.home.photos.push({image:r.path,title:'',text:''});
+  if(d.add==='work')C.work.items.unshift({file:r.path,category:'homes',caption:''});render();toast('Eklendi — alt yazısını yaz, sonra Yayınla')}
+ if(t.classList.contains('pub'))publish()});
+
+/* ---------- publish: one commit with media + content ---------- */
+const b64=blob=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result.split(',')[1]);f.readAsDataURL(blob)});
+async function publish(){const b=$('.pub');b.disabled=true;const m=$('.bar .msg');
+ try{const used=JSON.stringify(C),tree=[];const ps=Object.keys(pending).filter(p=>used.includes(p));let n=0;
+  for(const p of ps){m.textContent='Yükleniyor '+(++n)+'/'+ps.length+'…';const bl=await gh('/git/blobs',{method:'POST',body:JSON.stringify({content:await b64(pending[p].blob),encoding:'base64'})});tree.push({path:p,mode:'100644',type:'blob',sha:bl.sha})}
+  for(const f of FILES)if(JSON.stringify(C[f])!==JSON.stringify(orig[f]))tree.push({path:'content/'+f+'.json',mode:'100644',type:'blob',content:JSON.stringify(C[f],null,2)+'\n'});
+  m.textContent='Kaydediliyor…';const ref=await gh('/git/ref/heads/'+BR),base=await gh('/git/commits/'+ref.object.sha);
+  const tr=await gh('/git/trees',{method:'POST',body:JSON.stringify({base_tree:base.tree.sha,tree})});
+  const cm=await gh('/git/commits',{method:'POST',body:JSON.stringify({message:'Panelden güncelleme',tree:tr.sha,parents:[ref.object.sha]})});
+  await gh('/git/refs/heads/'+BR,{method:'PATCH',body:JSON.stringify({sha:cm.sha})});
+  pending={};orig=JSON.parse(JSON.stringify(C));render();$('.bar .msg').textContent='✓ Yayınlandı — site 1-2 dakikada güncellenir';toast('Yayınlandı ✓')}
+ catch(e){m.textContent='Hata: '+e.message;b.disabled=false}}
+addEventListener('beforeunload',e=>{if(dirty()){e.preventDefault();e.returnValue=''}});
+load();
+</script></body></html>

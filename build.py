@@ -351,12 +351,12 @@ def contact():
 def seo_files():
     urls = ["/","/services/","/areas/","/work.html","/about.html","/contact.html"]+[f"/services/{s['slug']}.html" for s in SERVICES]+[f"/areas/{a['slug']}.html" for a in AREAS]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{BASE}{u}</loc></url>" for u in urls)+"</urlset>")
-    write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
+    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: {BASE}/sitemap.xml\n")
     return len(urls)
 
 home(); services_index(); areas_index(); work(); about(); contact()
 for s in SERVICES: service(s)
 for a in AREAS: area(a)
-for d in ("assets", "media"):
+for d in ("assets", "media", "admin"):
     shutil.copytree(os.path.join(SRC, d), os.path.join(OUT, d), dirs_exist_ok=True)
 print("pages:", seo_files(), "->", OUT)
