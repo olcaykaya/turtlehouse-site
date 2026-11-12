@@ -118,13 +118,13 @@
     var VS='attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
     var FS='precision mediump float;varying vec2 uv;uniform sampler2D t;uniform vec2 res,tres,m;uniform float r,k,zoom,time;'+
     'vec2 cover(vec2 u){float ra=res.x/res.y,rt=tres.x/tres.y;vec2 s=ra>rt?vec2(1.,rt/ra):vec2(ra/rt,1.);return (u-.5)*s/zoom+.5;}'+
-    'void main(){vec2 c=uv-.5;float e=dot(c,c);vec2 u=.5+c*(1.-.10*e);'+   /* subtle barrel of a wide lens */
+    'void main(){vec2 c=uv-.5;float e=dot(c,c);vec2 u=.5+c*(1.-.06*e);'+   /* subtle barrel of a wide lens */
     'vec2 px=u*res;vec2 dv=(px-m)/r;float l=length(dv);float inside=1.-smoothstep(.85,1.,l);'+
     'float f=1.-k*.45*(1.-l*l)*inside;vec2 q=(m+(px-m)*f)/res;'+               /* magnifying bulge */
     'vec2 off=(q-m/res)*(.012*k*inside+.004*e*4.);'+                          /* chromatic fringe */
     'float R=texture2D(t,cover(q+off)).r,G=texture2D(t,cover(q)).g,B=texture2D(t,cover(q-off)).b;vec3 col=vec3(R,G,B);'+
     'col*=1.-e*.9;col+=smoothstep(.03,0.,abs(l-1.))*.18;col*=mix(1.,1.08,inside);'+
-    'float n=fract(sin(dot(uv*res+time,vec2(12.9898,78.233)))*43758.5453);col+=(n-.5)*.035;gl_FragColor=vec4(col,1.);}';
+    'float n=fract(sin(dot(uv*res+time,vec2(12.9898,78.233)))*43758.5453);col+=(n-.5)*.012;gl_FragColor=vec4(col,1.);}';
     function sh(type,src){var o=gl.createShader(type);gl.shaderSource(o,src);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.warn(gl.getShaderInfoLog(o));return null}return o}
     var pr=gl.createProgram(),a=sh(gl.VERTEX_SHADER,VS),b=sh(gl.FRAGMENT_SHADER,FS);if(!a||!b)return;
     gl.attachShader(pr,a);gl.attachShader(pr,b);gl.linkProgram(pr);gl.useProgram(pr);
