@@ -11,7 +11,7 @@
  */
 
 const ROOT_FOLDER_ID = '1QdrZ0D-EXrpl8fonoZvKVAto81bOwobf';  // folder that contains AnyDay, Chefa, ...
-const MAX_DEPTH = 4;                                          // root → client → month → Photos
+const MAX_DEPTH = 4;                                          // root → client → (month) → Photos
 
 function setup() {
   ScriptApp.getProjectTriggers().forEach(t => ScriptApp.deleteTrigger(t));
@@ -29,7 +29,7 @@ function walk_(folder, depth, props) {
   const it = folder.getFolders();
   while (it.hasNext()) {
     const f = it.next();
-    if (depth < 2 || !handle_(f, props)) walk_(f, depth + 1, props);   // only folders inside a month folder can be tracked   // tracked folders are leaves; don't descend
+    if (depth < 1 || !handle_(f, props)) walk_(f, depth + 1, props);   // client folders (depth 0) never tracked; anything below can be
   }
 }
 
