@@ -127,7 +127,7 @@ def head(p, title, desc, path, schemas):
     return f'''<!doctype html><html lang="en" class="js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{BASE}{path}">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}/media/k1.jpg"><meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f4f1ea"><link rel="icon" href="{p}media/logo-black.png">
+<meta name="theme-color" content="#f4f1ea"><link rel="icon" type="image/png" sizes="32x32" href="{p}media/favicon-32.png"><link rel="apple-touch-icon" href="{p}media/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{p}assets/style.css">{sc}</head><body>
