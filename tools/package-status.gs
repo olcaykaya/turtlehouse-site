@@ -29,7 +29,7 @@ function walk_(folder, depth, props) {
   const it = folder.getFolders();
   while (it.hasNext()) {
     const f = it.next();
-    if (!handle_(f, props)) walk_(f, depth + 1, props);   // tracked folders are leaves; don't descend
+    if (depth < 2 || !handle_(f, props)) walk_(f, depth + 1, props);   // only folders inside a month folder can be tracked   // tracked folders are leaves; don't descend
   }
 }
 
@@ -39,7 +39,7 @@ function handle_(f, props) {
   let st = JSON.parse(props.getProperty(key) || 'null');
 
   // 1) user typed "Name 10" or "Name 10 =8" (new folder, or edited an existing one)
-  const m = name.match(/^(.*?\S)\s+(\d{1,4})(?:\s*=\s*(\d{1,4}))?$/);
+  const m = name.match(/^(.*?\S)\s+(\d{1,3})(?:\s*=\s*(\d{1,3}))?$/);
   if (m && name.indexOf(' · ') < 0) {
     const actual = count_(f);
     st = { base: m[1], target: +m[2], offset: st ? st.offset : 0 };
