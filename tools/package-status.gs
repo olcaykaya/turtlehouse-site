@@ -84,13 +84,32 @@ function updateAll() {
   }
 }
 
+const SHORT = { Videos: ['Reel', 'Reels'], Photos: ['Photo', 'Photos'], Horizontal: ['Horizontal', 'Horizontal'] };
+
+/** The status lives in a FOLDER NAME so clients see it without clicking: "📦 Remaining: 1 Reel · 0 Photos" */
+function statusFolder_(month, title) {
+  const props = PropertiesService.getScriptProperties(), key = 'SF_' + month.getId();
+  let f = null, id = props.getProperty(key);
+  if (id) { try { f = DriveApp.getFolderById(id); if (f.isTrashed()) f = null; } catch (e) { f = null; } }
+  if (!f) { f = month.createFolder(title); props.setProperty(key, f.getId()); }
+  if (f.getName() !== title) f.setName(title);
+  return f;
+}
+
 function writeStatus_(clientName, month, p, counts) {
-  const it = month.getFilesByName(STATUS_NAME);
+  const parts = [];
+  let left = 0;
+  CATEGORIES.forEach(c => {
+    if (p[c] > 0) { const r = Math.max(0, p[c] - counts[c]); left += r; parts.push(r + ' ' + SHORT[c][r === 1 ? 0 : 1]); }
+  });
+  const title = left === 0 ? '✅ Package complete — all delivered' : '📦 Remaining: ' + parts.join(' · ');
+  const folder = statusFolder_(month, title);
+  const it = folder.getFilesByName(STATUS_NAME);
   let ss;
   if (it.hasNext()) ss = SpreadsheetApp.openById(it.next().getId());
   else {
     ss = SpreadsheetApp.create(STATUS_NAME);
-    DriveApp.getFileById(ss.getId()).moveTo(month);
+    DriveApp.getFileById(ss.getId()).moveTo(folder);
   }
   const sh = ss.getSheets()[0];
   sh.clear(); sh.setName('Status');
