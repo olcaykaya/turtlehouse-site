@@ -1,1 +1,43 @@
-{"status":"init"}
+{
+ "ts": "2026-11-16T13:11:36-0500",
+ "host": "Olcay-MacBook-Pro.local",
+ "auth_alert_active": false,
+ "log": {
+  "last_claude_ok": "2026-11-16 13:11:35",
+  "last_claude_error": "2026-11-16 11:21:44",
+  "errors_24h": 8,
+  "poll_errors_24h": 30,
+  "last_line": "2026-11-16 13:11:36 bot started"
+ },
+ "jobs": {
+  "company": {
+   "email-am": "2026-11-16",
+   "email-pm": "2026-11-15",
+   "site": "2026-11-16",
+   "blog": "2026-11-10",
+   "manager": "2026-11-15",
+   "improve": "2026-11-15",
+   "gbp": "2026-11-12"
+  },
+  "trend": {
+   "done": "2026-46"
+  },
+  "scout": {
+   "done": "2026-11-15"
+  },
+  "weekly": {
+   "done": "2026-46"
+  },
+  "mail": {
+   "last_uid": 1236,
+   "checked": "2026-11-12T14:00"
+  }
+ },
+ "instagram": {
+  "followers": 963,
+  "posts": 188,
+  "last_post": "2026-10-23T23:39:41+0000",
+  "stories_live": 0
+ },
+ "disk_free_gb": 165.8
+}
