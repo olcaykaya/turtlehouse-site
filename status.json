@@ -1,12 +1,12 @@
 {
- "ts": "2026-11-17T14:17:42-0500",
+ "ts": "2026-11-17T15:18:29-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-17 14:00:46",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 203,
+  "poll_errors_24h": 95,
   "last_line": "2026-11-17 14:00:46 claude -> Öğleden sonraki e-posta turunu bitirdim ve raporu `agent/reports/2026-11-17-email.md` dosy"
  },
  "jobs": {
