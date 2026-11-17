@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-16T16:30:42-0500",
+ "ts": "2026-11-16T19:47:48-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-16 14:44:19",
+  "last_claude_ok": "2026-11-16 19:10:27",
   "last_claude_error": "2026-11-16 11:21:44",
-  "errors_24h": 7,
-  "poll_errors_24h": 141,
-  "last_line": "2026-11-16 16:29:55 poll error timeout('The read operation timed out')"
+  "errors_24h": 5,
+  "poll_errors_24h": 227,
+  "last_line": "2026-11-16 19:47:37 poll error URLError(timeout('timed out'))"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-16",
    "site": "2026-11-16",
    "blog": "2026-11-10",
-   "manager": "2026-11-15",
+   "manager": "2026-11-16",
    "improve": "2026-11-15",
    "gbp": "2026-11-12"
   },
@@ -23,7 +23,7 @@
    "done": "2026-46"
   },
   "scout": {
-   "done": "2026-11-15"
+   "done": "2026-11-16"
   },
   "weekly": {
    "done": "2026-46"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 165.8
+ "disk_free_gb": 173.8
 }
