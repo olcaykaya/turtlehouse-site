@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-17T10:15:07-0500",
+ "ts": "2026-11-17T11:15:32-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-17 09:15:10",
+  "last_claude_ok": "2026-11-17 10:18:20",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 2,
-  "poll_errors_24h": 212,
-  "last_line": "2026-11-17 10:15:07 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
+  "poll_errors_24h": 209,
+  "last_line": "2026-11-17 10:18:20 claude -> Günaydın 🐢 Bugün yeterince iyi bir şey çıkmadı, göndermiyorum. Tek aday \"3 hooks\" ipucu st"
  },
  "jobs": {
   "company": {
@@ -29,8 +29,8 @@
    "done": "2026-46"
   },
   "mail": {
-   "last_uid": 1245,
-   "checked": "2026-11-16T14:00"
+   "last_uid": 1248,
+   "checked": "2026-11-17T10:15"
   }
  },
  "instagram": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 174.7
+ "disk_free_gb": 173.9
 }
