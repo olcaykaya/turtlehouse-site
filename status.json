@@ -1,12 +1,12 @@
 {
- "ts": "2026-11-17T12:16:06-0500",
+ "ts": "2026-11-17T13:16:55-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-17 10:18:20",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 208,
+  "poll_errors_24h": 205,
   "last_line": "2026-11-17 10:18:20 claude -> Günaydın 🐢 Bugün yeterince iyi bir şey çıkmadı, göndermiyorum. Tek aday \"3 hooks\" ipucu st"
  },
  "jobs": {
