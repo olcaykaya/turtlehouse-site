@@ -1,17 +1,17 @@
 {
- "ts": "2026-11-16T23:31:35-0500",
+ "ts": "2026-11-17T10:15:07-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-16 19:10:27",
+  "last_claude_ok": "2026-11-17 09:15:10",
   "last_claude_error": "2026-11-16 23:30:45",
-  "errors_24h": 5,
-  "poll_errors_24h": 226,
-  "last_line": "2026-11-16 23:31:35 claude <- [blog — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/blog.md oku ve ad"
+  "errors_24h": 2,
+  "poll_errors_24h": 212,
+  "last_line": "2026-11-17 10:15:07 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
  },
  "jobs": {
   "company": {
-   "email-am": "2026-11-16",
+   "email-am": "2026-11-17",
    "email-pm": "2026-11-16",
    "site": "2026-11-16",
    "blog": "2026-11-16",
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 174.8
+ "disk_free_gb": 174.7
 }
