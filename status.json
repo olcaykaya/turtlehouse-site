@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-17T17:19:58-0500",
+ "ts": "2026-11-17T18:20:01-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-17 17:18:16",
+  "last_claude_ok": "2026-11-17 18:04:00",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 79,
-  "last_line": "2026-11-17 17:18:16 claude -> Blog yazısı yayında kanka 🐢 **\"Before and After Remodel Video: What to Film at Every Stage"
+  "poll_errors_24h": 71,
+  "last_line": "2026-11-17 18:04:00 claude -> Akşam taraması bitti, rapor `agent/reports/2026-11-17-scout.md` dosyasında (DURUM: OK).  -"
  },
  "jobs": {
   "company": {
@@ -23,7 +23,7 @@
    "done": "2026-46"
   },
   "scout": {
-   "done": "2026-11-16"
+   "done": "2026-11-17"
   },
   "weekly": {
    "done": "2026-46"
