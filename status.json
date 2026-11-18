@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T15:47:43-0500",
+ "ts": "2026-11-18T16:48:04-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-18 14:49:45",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 8,
-  "last_line": "2026-11-18 14:49:45 claude -> Saat 14:00 e-posta kontrolü bitti, rapor `agent/reports/2026-11-18-email.md` dosyasının so"
+  "poll_errors_24h": 19,
+  "last_line": "2026-11-18 16:46:53 poll error RemoteDisconnected('Remote end closed connection without response')"
  },
  "jobs": {
   "company": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 180.5
+ "disk_free_gb": 181.2
 }
