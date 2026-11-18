@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-17T20:56:26-0500",
+ "ts": "2026-11-17T21:56:40-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-17 19:08:56",
+  "last_claude_ok": "2026-11-17 21:01:46",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
   "poll_errors_24h": 2,
-  "last_line": "2026-11-17 20:56:26 bot started"
+  "last_line": "2026-11-17 21:01:46 claude -> Gecenin iyileştirmesini bitirdim. Olcay'a mesaj atmadım, rapor `agent/reports/2026-11-17-i"
  },
  "jobs": {
   "company": {
@@ -16,7 +16,7 @@
    "site": "2026-11-16",
    "blog": "2026-11-16",
    "manager": "2026-11-17",
-   "improve": "2026-11-16",
+   "improve": "2026-11-17",
    "gbp": "2026-11-12"
   },
   "trend": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 184.6
+ "disk_free_gb": 165.5
 }
