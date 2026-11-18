@@ -1,11 +1,11 @@
 {
- "ts": "2026-11-17T22:57:28-0500",
+ "ts": "2026-11-17T23:58:11-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-17 21:01:46",
   "last_claude_error": "2026-11-16 23:30:45",
-  "errors_24h": 1,
+  "errors_24h": 0,
   "poll_errors_24h": 1,
   "last_line": "2026-11-17 21:01:46 claude -> Gecenin iyileştirmesini bitirdim. Olcay'a mesaj atmadım, rapor `agent/reports/2026-11-17-i"
  },
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 158.5
+ "disk_free_gb": 158.1
 }
