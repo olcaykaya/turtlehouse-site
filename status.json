@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T09:03:30-0500",
+ "ts": "2026-11-18T11:01:30-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-18 08:33:22",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 1,
-  "last_line": "2026-11-18 08:33:22 claude -> Günaydın 🐢  1) **Listing Photo Red Flags** (ipucu, 2 slayt): kırmızı klasör stili, emlakçı"
+  "poll_errors_24h": 2,
+  "last_line": "2026-11-18 11:01:30 claude <- [Haftalık trend avı — otomatik] CLAUDE.md'deki 'Weekly trend scout' adımlarını uygula: too"
  },
  "jobs": {
   "company": {
@@ -20,7 +20,7 @@
    "gbp": "2026-11-12"
   },
   "trend": {
-   "done": "2026-46"
+   "done": "2026-47"
   },
   "scout": {
    "done": "2026-11-17"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 184.6
+ "disk_free_gb": 184.4
 }
