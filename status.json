@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-17T18:20:01-0500",
+ "ts": "2026-11-17T19:20:45-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-17 18:04:00",
+  "last_claude_ok": "2026-11-17 19:08:56",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 71,
-  "last_line": "2026-11-17 18:04:00 claude -> Akşam taraması bitti, rapor `agent/reports/2026-11-17-scout.md` dosyasında (DURUM: OK).  -"
+  "poll_errors_24h": 8,
+  "last_line": "2026-11-17 19:08:56 claude -> 🐢 Bugün: • Blog yayında: turtlehouseproductions.com/blog/before-and-after-remodel-video • "
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-17",
    "site": "2026-11-16",
    "blog": "2026-11-16",
-   "manager": "2026-11-16",
+   "manager": "2026-11-17",
    "improve": "2026-11-16",
    "gbp": "2026-11-12"
   },
