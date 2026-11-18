@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T08:02:45-0500",
+ "ts": "2026-11-18T09:03:30-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-18 08:01:03",
+  "last_claude_ok": "2026-11-18 08:33:22",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
   "poll_errors_24h": 1,
-  "last_line": "2026-11-18 08:01:03 claude -> Bu sabahki e-posta kontrolünü yaptım. Raporu `agent/reports/2026-11-18-email.md` dosyasına"
+  "last_line": "2026-11-18 08:33:22 claude -> Günaydın 🐢  1) **Listing Photo Red Flags** (ipucu, 2 slayt): kırmızı klasör stili, emlakçı"
  },
  "jobs": {
   "company": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 184.8
+ "disk_free_gb": 184.6
 }
