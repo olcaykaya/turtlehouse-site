@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T20:50:50-0500",
+ "ts": "2026-11-18T21:51:18-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-18 19:00:59",
+  "last_claude_ok": "2026-11-18 21:01:37",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
   "poll_errors_24h": 112,
-  "last_line": "2026-11-18 19:55:12 poll error URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  "last_line": "2026-11-18 21:01:37 claude -> Bu geceki iyileştirme tamam. Olcay'a mesaj atılmadı.  - **Ne yaptım:** yeni bir araç ekled"
  },
  "jobs": {
   "company": {
@@ -16,7 +16,7 @@
    "site": "2026-11-16",
    "blog": "2026-11-16",
    "manager": "2026-11-18",
-   "improve": "2026-11-17",
+   "improve": "2026-11-18",
    "gbp": "2026-11-12"
   },
   "trend": {
