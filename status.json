@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T18:49:13-0500",
+ "ts": "2026-11-18T19:50:00-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-18 18:02:36",
+  "last_claude_ok": "2026-11-18 19:00:59",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 56,
-  "last_line": "2026-11-18 18:02:36 claude -> Bugünkü akşam taraması bitti, rapor `agent/reports/2026-11-18-scout.md` dosyasında. Sana m"
+  "poll_errors_24h": 98,
+  "last_line": "2026-11-18 19:46:26 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-18",
    "site": "2026-11-16",
    "blog": "2026-11-16",
-   "manager": "2026-11-17",
+   "manager": "2026-11-18",
    "improve": "2026-11-17",
    "gbp": "2026-11-12"
   },
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 183.3
+ "disk_free_gb": 183.9
 }
