@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-19T01:57:22-0500",
+ "ts": "2026-11-19T03:11:10-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-18 21:01:37",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 122,
-  "last_line": "2026-11-19 01:57:12 poll error URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
+  "poll_errors_24h": 128,
+  "last_line": "2026-11-19 03:10:59 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
