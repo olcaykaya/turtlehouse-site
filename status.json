@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-18T21:51:18-0500",
+ "ts": "2026-11-18T22:52:03-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-18 21:01:37",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 112,
-  "last_line": "2026-11-18 21:01:37 claude -> Bu geceki iyileştirme tamam. Olcay'a mesaj atılmadı.  - **Ne yaptım:** yeni bir araç ekled"
+  "poll_errors_24h": 115,
+  "last_line": "2026-11-18 22:44:00 poll error URLError(timeout('_ssl.c:1112: The handshake operation timed out'))"
  },
  "jobs": {
   "company": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 182.1
+ "disk_free_gb": 181.8
 }
