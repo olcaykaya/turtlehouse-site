@@ -1,23 +1,23 @@
 {
- "ts": "2026-11-19T07:40:59-0500",
- "host": "Olcay-MacBook-Pro.local",
+ "ts": "2026-11-19T11:19:20-0500",
+ "host": "MacBookPro",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-18 21:01:37",
+  "last_claude_ok": "2026-11-19 10:30:43",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 148,
-  "last_line": "2026-11-19 07:40:49 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 213,
+  "last_line": "2026-11-19 10:52:00 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
-   "email-am": "2026-11-18",
+   "email-am": "2026-11-19",
    "email-pm": "2026-11-18",
    "site": "2026-11-16",
    "blog": "2026-11-16",
    "manager": "2026-11-18",
    "improve": "2026-11-18",
-   "gbp": "2026-11-12"
+   "gbp": "2026-11-19"
   },
   "trend": {
    "done": "2026-47"
@@ -29,12 +29,12 @@
    "done": "2026-46"
   },
   "mail": {
-   "last_uid": 1254,
-   "checked": "2026-11-18T14:49"
+   "last_uid": 1257,
+   "checked": "2026-11-19T08:17"
   }
  },
  "instagram": {
-  "followers": 963,
+  "followers": 962,
   "posts": 188,
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
