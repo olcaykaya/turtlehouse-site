@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-19T04:14:14-0500",
+ "ts": "2026-11-19T05:24:05-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-18 21:01:37",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 132,
-  "last_line": "2026-11-19 04:14:04 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 138,
+  "last_line": "2026-11-19 05:23:55 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 180.9
+ "disk_free_gb": 180.8
 }
