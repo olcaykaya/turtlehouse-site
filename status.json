@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-20T12:52:32-0500",
+ "ts": "2026-11-20T14:09:14-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
@@ -7,12 +7,12 @@
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
   "poll_errors_24h": 106,
-  "last_line": "2026-11-20 12:52:21 poll error timeout('The read operation timed out')"
+  "last_line": "2026-11-20 14:09:14 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
  },
  "jobs": {
   "company": {
    "email-am": "2026-11-20",
-   "email-pm": "2026-11-19",
+   "email-pm": "2026-11-20",
    "site": "2026-11-16",
    "blog": "2026-11-16",
    "manager": "2026-11-19",
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 180.6
+ "disk_free_gb": 176.9
 }
