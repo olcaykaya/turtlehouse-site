@@ -1,17 +1,17 @@
 {
- "ts": "2026-11-20T07:52:19-0500",
+ "ts": "2026-11-20T09:14:29-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-19 21:36:46",
+  "last_claude_ok": "2026-11-20 08:14:01",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 1,
-  "poll_errors_24h": 163,
-  "last_line": "2026-11-20 07:52:08 poll error ConnectionResetError(54, 'Connection reset by peer')"
+  "poll_errors_24h": 111,
+  "last_line": "2026-11-20 09:14:19 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
-   "email-am": "2026-11-19",
+   "email-am": "2026-11-20",
    "email-pm": "2026-11-19",
    "site": "2026-11-16",
    "blog": "2026-11-16",
@@ -29,8 +29,8 @@
    "done": "2026-46"
   },
   "mail": {
-   "last_uid": 1259,
-   "checked": "2026-11-19T14:42"
+   "last_uid": 1260,
+   "checked": "2026-11-20T08:13"
   }
  },
  "instagram": {
