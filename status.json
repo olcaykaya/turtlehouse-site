@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-19T16:32:13-0500",
- "host": "MacBookPro",
+ "ts": "2026-11-20T00:18:40-0500",
+ "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-19 14:42:47",
+  "last_claude_ok": "2026-11-19 21:36:46",
   "last_claude_error": "2026-11-16 23:30:45",
-  "errors_24h": 0,
-  "poll_errors_24h": 206,
-  "last_line": "2026-11-19 16:32:03 poll error timeout('The read operation timed out')"
+  "errors_24h": 1,
+  "poll_errors_24h": 180,
+  "last_line": "2026-11-20 00:03:29 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
@@ -15,15 +15,15 @@
    "email-pm": "2026-11-19",
    "site": "2026-11-16",
    "blog": "2026-11-16",
-   "manager": "2026-11-18",
-   "improve": "2026-11-18",
+   "manager": "2026-11-19",
+   "improve": "2026-11-19",
    "gbp": "2026-11-19"
   },
   "trend": {
    "done": "2026-47"
   },
   "scout": {
-   "done": "2026-11-18"
+   "done": "2026-11-19"
   },
   "weekly": {
    "done": "2026-46"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 180.7
+ "disk_free_gb": 180.6
 }
