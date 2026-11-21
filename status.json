@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-20T19:29:27-0500",
+ "ts": "2026-11-20T20:30:13-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 176.4
+ "disk_free_gb": 175.7
 }
