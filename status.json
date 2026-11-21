@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-21T04:09:39-0500",
+ "ts": "2026-11-21T05:10:12-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-20 21:02:28",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 48,
-  "last_line": "2026-11-21 04:09:29 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 47,
+  "last_line": "2026-11-21 04:57:12 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
