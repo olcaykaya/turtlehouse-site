@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-21T08:13:24-0500",
+ "ts": "2026-11-21T09:29:59-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-20 21:02:28",
+  "last_claude_ok": "2026-11-21 09:14:48",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
   "poll_errors_24h": 47,
-  "last_line": "2026-11-21 08:13:24 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
+  "last_line": "2026-11-21 09:14:48 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
@@ -29,8 +29,8 @@
    "done": "2026-46"
   },
   "mail": {
-   "last_uid": 1260,
-   "checked": "2026-11-20T08:13"
+   "last_uid": 1261,
+   "checked": "2026-11-21T08:13"
   }
  },
  "instagram": {
