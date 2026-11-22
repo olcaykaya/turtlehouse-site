@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-22T17:40:12-0500",
+ "ts": "2026-11-22T18:41:40-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-22 14:01:04",
+  "last_claude_ok": "2026-11-22 18:01:37",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
   "poll_errors_24h": 38,
-  "last_line": "2026-11-22 16:27:12 poll error URLError(timeout('_ssl.c:1112: The handshake operation timed out'))"
+  "last_line": "2026-11-22 18:01:37 claude -> Bu akşamki tespit raporunu yazdım: `agent/reports/2026-11-22-scout.md`. Olcay'a mesaj atıl"
  },
  "jobs": {
   "company": {
@@ -23,7 +23,7 @@
    "done": "2026-47"
   },
   "scout": {
-   "done": "2026-11-21"
+   "done": "2026-11-22"
   },
   "weekly": {
    "done": "2026-47"
