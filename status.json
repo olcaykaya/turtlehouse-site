@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-22T10:07:38-0500",
+ "ts": "2026-11-22T11:37:45-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-22 09:36:00",
+  "last_claude_ok": "2026-11-22 11:12:01",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 50,
-  "last_line": "2026-11-22 10:07:38 claude <- [Haftalık Instagram dersi — otomatik] CLAUDE.md'deki 'Weekly Instagram lesson' adımlarını "
+  "poll_errors_24h": 46,
+  "last_line": "2026-11-22 11:28:11 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
