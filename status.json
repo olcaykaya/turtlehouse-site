@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-22T14:38:04-0500",
+ "ts": "2026-11-22T15:38:51-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-22 14:01:04",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 43,
-  "last_line": "2026-11-22 14:01:04 claude -> Zoho'yu kontrol ettim, sabah 08:05'ten beri yeni mail gelmemiş. Bu yüzden taslak gerekmedi"
+  "poll_errors_24h": 42,
+  "last_line": "2026-11-22 14:55:15 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
