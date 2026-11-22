@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-21T17:30:38-0500",
+ "ts": "2026-11-21T19:05:15-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-21 14:11:57",
+  "last_claude_ok": "2026-11-21 19:05:12",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 47,
-  "last_line": "2026-11-21 17:30:28 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 44,
+  "last_line": "2026-11-21 19:05:12 claude <- [Müdür — akşam özeti] Önce agent/company.md, sonra agent/roles/manager.md oku ve uygula. C"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-21",
    "site": "2026-11-16",
    "blog": "2026-11-16",
-   "manager": "2026-11-20",
+   "manager": "2026-11-21",
    "improve": "2026-11-20",
    "gbp": "2026-11-19"
   },
@@ -23,7 +23,7 @@
    "done": "2026-47"
   },
   "scout": {
-   "done": "2026-11-20"
+   "done": "2026-11-21"
   },
   "weekly": {
    "done": "2026-46"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 168.3
+ "disk_free_gb": 168.0
 }
