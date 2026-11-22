@@ -1,18 +1,18 @@
 {
- "ts": "2026-11-22T13:37:53-0500",
+ "ts": "2026-11-22T14:38:04-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-22 11:12:01",
+  "last_claude_ok": "2026-11-22 14:01:04",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 44,
-  "last_line": "2026-11-22 13:24:14 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 43,
+  "last_line": "2026-11-22 14:01:04 claude -> Zoho'yu kontrol ettim, sabah 08:05'ten beri yeni mail gelmemiş. Bu yüzden taslak gerekmedi"
  },
  "jobs": {
   "company": {
    "email-am": "2026-11-22",
-   "email-pm": "2026-11-21",
+   "email-pm": "2026-11-22",
    "site": "2026-11-16",
    "blog": "2026-11-16",
    "manager": "2026-11-21",
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 165.4
+ "disk_free_gb": 165.2
 }
