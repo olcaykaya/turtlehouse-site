@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-23T16:51:22-0500",
+ "ts": "2026-11-23T18:34:28-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-23 14:00:45",
+  "last_claude_ok": "2026-11-23 18:34:28",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 25,
-  "last_line": "2026-11-23 16:44:58 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 27,
+  "last_line": "2026-11-23 18:34:28 claude -> Bugünün akşam taraması bitti. Rapor `agent/reports/2026-11-23-scout.md` dosyasında, Olcay'"
  },
  "jobs": {
   "company": {
@@ -23,7 +23,7 @@
    "done": "2026-47"
   },
   "scout": {
-   "done": "2026-11-22"
+   "done": "2026-11-23"
   },
   "weekly": {
    "done": "2026-47"
