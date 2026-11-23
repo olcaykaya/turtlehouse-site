@@ -1,12 +1,12 @@
 {
- "ts": "2026-11-22T21:43:26-0500",
+ "ts": "2026-11-22T22:43:40-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-22 21:01:50",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 35,
+  "poll_errors_24h": 32,
   "last_line": "2026-11-22 21:01:50 claude -> Bu gecenin iyileştirmesi bitti ve test edildi. Raporu `agent/reports/2026-11-22-improve.md"
  },
  "jobs": {
