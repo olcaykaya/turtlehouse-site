@@ -1,20 +1,20 @@
 {
- "ts": "2026-11-23T08:10:31-0500",
+ "ts": "2026-11-23T10:47:50-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-22 21:01:50",
+  "last_claude_ok": "2026-11-23 10:46:59",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 28,
-  "last_line": "2026-11-23 08:10:31 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
+  "poll_errors_24h": 25,
+  "last_line": "2026-11-23 10:46:59 claude -> Bugünkü blog yazısı kontrol listesini geçti ve yayında: https://turtlehouseproductions.com"
  },
  "jobs": {
   "company": {
    "email-am": "2026-11-23",
    "email-pm": "2026-11-22",
    "site": "2026-11-16",
-   "blog": "2026-11-16",
+   "blog": "2026-11-23",
    "manager": "2026-11-22",
    "improve": "2026-11-22",
    "gbp": "2026-11-19"
