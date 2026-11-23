@@ -24,9 +24,6 @@ Open on the single best thing the property has. The view from the corner window.
 
 Redfin's writers quote a videographer who puts it simply: buyers decide in the first few seconds, so they never open on the front door. We agree.
 
-![Dining room with a sputnik chandelier and afternoon light on the wall, shot by Turtle House](media/blog/luxury-dining-room-chandelier.jpg)
-*Shot by Turtle House. One strong frame with light doing the work beats five rooms in a row.*
-
 ## 2. A luxury real estate videographer in NYC sells the light, not the square footage
 
 A $5M buyer has seen a hundred white kitchens. What they haven't seen is how *this* apartment feels at 4 p.m. in November.
@@ -86,13 +83,14 @@ Same shoot day, four or five uses. That's how a single listing keeps showing up 
 
 The best luxury listings look like boutique hotel suites: calm, clean, every surface intentional. We shoot hotels too, and the prep is the same.
 
-> **Quick checklist (day before the shoot)**
-> - Clear every counter down to 2-3 objects
-> - Replace any dead or mismatched bulbs (same color temperature everywhere)
-> - Fresh flowers in one or two places, not everywhere
-> - Hide cords, remotes, toiletries, kids' and pet items
-> - Windows cleaned inside and out where possible
-> - Building access, doorman and elevator booked for the crew
+### Quick checklist: the day before the shoot
+
+- Clear every counter down to 2-3 objects
+- Replace any dead or mismatched bulbs (same color temperature everywhere)
+- Fresh flowers in one or two places, not everywhere
+- Hide cords, remotes, toiletries, kids' and pet items
+- Windows cleaned inside and out where possible
+- Building access, doorman and elevator booked for the crew
 
 ![A hotel lounge with a long upholstered sofa and warm cove lighting, shot by Turtle House](media/blog/luxury-lounge-cove-lighting.jpg)
 *Shot by Turtle House. Calm, even light and almost nothing on the surfaces.*
