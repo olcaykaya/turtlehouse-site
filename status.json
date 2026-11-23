@@ -1,12 +1,12 @@
 {
- "ts": "2026-11-23T11:48:02-0500",
+ "ts": "2026-11-23T12:48:49-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-23 11:11:24",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 23,
+  "poll_errors_24h": 22,
   "last_line": "2026-11-23 11:11:24 claude -> Haftalık site denetimini yaptım. Rapor `agent/reports/2026-11-23-site.md` dosyasında, Olca"
  },
  "jobs": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 157.1
+ "disk_free_gb": 156.8
 }
