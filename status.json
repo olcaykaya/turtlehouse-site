@@ -1,22 +1,22 @@
 {
- "ts": "2026-11-24T19:28:16-0500",
+ "ts": "2026-11-24T21:29:18-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-24 19:28:15",
+  "last_claude_ok": "2026-11-24 21:02:06",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 8,
-  "last_line": "2026-11-24 19:28:15 claude <- [email — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/email.md oku ve "
+  "poll_errors_24h": 21,
+  "last_line": "2026-11-24 21:05:16 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
    "email-am": "2026-11-24",
-   "email-pm": "2026-11-23",
+   "email-pm": "2026-11-24",
    "site": "2026-11-23",
    "blog": "2026-11-23",
-   "manager": "2026-11-23",
-   "improve": "2026-11-23",
+   "manager": "2026-11-24",
+   "improve": "2026-11-24",
    "gbp": "2026-11-19"
   },
   "trend": {
@@ -29,8 +29,8 @@
    "done": "2026-47"
   },
   "mail": {
-   "last_uid": 1264,
-   "checked": "2026-11-23T14:00"
+   "last_uid": 1269,
+   "checked": "2026-11-24T19:28"
   }
  },
  "instagram": {
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 161.7
+ "disk_free_gb": 162.0
 }
