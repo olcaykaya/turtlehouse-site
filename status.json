@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-25T16:06:37-0500",
- "host": "Olcay-MacBook-Pro.local",
+ "ts": "2026-11-25T18:07:58-0500",
+ "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-25 15:03:59",
+  "last_claude_ok": "2026-11-25 18:02:53",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 31,
-  "last_line": "2026-11-25 15:54:14 poll error URLError(TimeoutError(60, 'Operation timed out'))"
+  "poll_errors_24h": 35,
+  "last_line": "2026-11-25 18:02:53 claude -> Akşam taraması bitti. Rapor `agent/reports/2026-11-25-scout.md` dosyasında. Olcay'a mesaj "
  },
  "jobs": {
   "company": {
@@ -23,7 +23,7 @@
    "done": "2026-48"
   },
   "scout": {
-   "done": "2026-11-24"
+   "done": "2026-11-25"
   },
   "weekly": {
    "done": "2026-47"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 161.8
+ "disk_free_gb": 161.7
 }
