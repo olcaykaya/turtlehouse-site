@@ -1,18 +1,18 @@
 {
- "ts": "2026-11-25T08:34:00-0500",
+ "ts": "2026-11-25T15:06:15-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-25 08:33:05",
+  "last_claude_ok": "2026-11-25 15:03:59",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
   "poll_errors_24h": 29,
-  "last_line": "2026-11-25 08:33:05 claude -> Günaydın 🐢  1) **İpucu story'si:** \"open on the kitchen, not the door\". Emlakçılara listin"
+  "last_line": "2026-11-25 15:06:15 bot started"
  },
  "jobs": {
   "company": {
    "email-am": "2026-11-25",
-   "email-pm": "2026-11-24",
+   "email-pm": "2026-11-25",
    "site": "2026-11-23",
    "blog": "2026-11-23",
    "manager": "2026-11-24",
@@ -20,7 +20,7 @@
    "gbp": "2026-11-19"
   },
   "trend": {
-   "done": "2026-47"
+   "done": "2026-48"
   },
   "scout": {
    "done": "2026-11-24"
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 161.0
+ "disk_free_gb": 161.5
 }
