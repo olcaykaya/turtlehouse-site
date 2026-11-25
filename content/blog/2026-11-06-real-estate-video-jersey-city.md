@@ -4,7 +4,7 @@ slug: real-estate-video-jersey-city
 seo_title: Real Estate Video Jersey City vs Photos | Turtle House
 seo_description: Real estate video in Jersey City or just photos? What each one does, when video is worth it, how long to make it, and what to shoot first in one visit.
 excerpt: Every vendor says video sells homes faster. Most of those numbers have no study behind them. Here's when real estate video in Jersey City earns its place, and when great photos are enough.
-cover: media/blog/nj-kitchen-range-under-cabinet-lights.jpg
+cover: media/blog/interior-lamps-on-evening.jpg
 keyword: real estate video Jersey City
 ---
 A seller in a Jersey City condo asks you: "Are you doing a video for my place?" You know the other agent they interviewed promised one. You also know the last listing video you paid for got 40 views.

@@ -4,7 +4,7 @@ slug: real-estate-photo-shoot-checklist-nj
 seo_title: Real Estate Photo Shoot Checklist NJ | Turtle House
 seo_description: A room-by-room real estate photo shoot checklist for NJ homes. What to clear, fix and switch on before the photographer and videographer arrive.
 excerpt: The room-by-room list we wish every seller had the night before a listing shoot in Jersey City, Hoboken or anywhere in Hudson County.
-cover: media/blog/nj-kitchen-shoot-ready.jpg
+cover: media/blog/luxury-lounge-cove-lighting.jpg
 keyword: real estate photo shoot checklist NJ
 ---
 Most listing shoots don't go wrong because of the camera. They go wrong because of a toaster, a pile of mail, and three different bulb colors in one room. This real estate photo shoot checklist for NJ homes is the list we'd hand every seller and agent the day before we show up in Jersey City, Hoboken, Weehawken or anywhere else in Hudson County.

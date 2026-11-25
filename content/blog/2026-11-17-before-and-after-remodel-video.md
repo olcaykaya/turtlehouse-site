@@ -4,7 +4,7 @@ slug: before-and-after-remodel-video
 seo_title: Before and After Remodel Video: Shot Plan | Turtle House
 seo_description: A before and after remodel video only works if you planned the "before." What NJ remodelers should film before demo, during the build and at the reveal.
 excerpt: The reveal is easy to film. The "before" is the part everyone forgets, and without it the after has nothing to beat. A stage-by-stage shot plan for NJ and NYC remodelers.
-cover: media/blog/kitchen-remodel-after-video-frame.jpg
+cover: media/blog/kitchen-remodel-faucet-detail.jpg
 keyword: before and after remodel video
 ---
 
