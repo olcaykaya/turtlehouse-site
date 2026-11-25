@@ -20,9 +20,9 @@
       "caption": "Resort video | Visual effects"
     },
     {
-      "video": "media/reels/reel2.mp4",
-      "poster": "media/reels/reel2.jpg",
-      "caption": "Resort video | Pool and atmosphere"
+      "video": "media/reels/reel-kitchen-reno.mp4",
+      "poster": "media/reels/reel-kitchen-reno.jpg",
+      "caption": "Kitchen renovation | Social video"
     },
     {
       "video": "media/reels/reel3.mp4",
@@ -30,19 +30,19 @@
       "caption": "Resort video | Details and atmosphere"
     },
     {
-      "video": "media/reels/reel4.mp4",
-      "poster": "media/reels/reel4.jpg",
-      "caption": "Restaurant video | Food and setting"
+      "video": "media/reels/reel-this-or-that.mp4",
+      "poster": "media/reels/reel-this-or-that.jpg",
+      "caption": "Showroom series | This or that"
     },
     {
-      "video": "media/reels/reel5.mp4",
-      "poster": "media/reels/reel5.jpg",
-      "caption": "Bar video | Drinks and atmosphere"
+      "video": "media/reels/reel-showroom.mp4",
+      "poster": "media/reels/reel-showroom.jpg",
+      "caption": "Kitchen showroom | Brand video"
     },
     {
-      "video": "media/reels/reel6.mp4",
-      "poster": "media/reels/reel6.jpg",
-      "caption": "Resort video | Behind the scenes"
+      "video": "media/reels/reel-zuma-kitchen.mp4",
+      "poster": "media/reels/reel-zuma-kitchen.jpg",
+      "caption": "Kitchen design | Short-form"
     }
   ],
   "photos": [

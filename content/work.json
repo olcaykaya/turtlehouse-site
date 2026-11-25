@@ -6,6 +6,11 @@
    "caption": "Resort film"
   },
   {
+   "file": "media/fina-table-spread.jpg",
+   "category": "food",
+   "caption": "Restaurant · table spread"
+  },
+  {
    "file": "media/k1.jpg",
    "category": "homes",
    "caption": "Kitchen, New Jersey"
@@ -19,6 +24,11 @@
    "file": "media/h1.jpg",
    "category": "hotels",
    "caption": "Hotel"
+  },
+  {
+   "file": "media/sandwich-cheese-pull.jpg",
+   "category": "food",
+   "caption": "Sandwich shop · hero shot"
   },
   {
    "file": "media/f6.jpg",
@@ -39,6 +49,16 @@
    "file": "media/f1.jpg",
    "category": "food",
    "caption": "Bar"
+  },
+  {
+   "file": "media/fina-dinner-guests.jpg",
+   "category": "food",
+   "caption": "Restaurant · guests"
+  },
+  {
+   "file": "media/sandwich-neon-window.jpg",
+   "category": "food",
+   "caption": "Sandwich shop · storefront"
   },
   {
    "file": "media/h3.jpg",
@@ -119,6 +139,26 @@
    "file": "media/b2.jpg",
    "category": "set",
    "caption": "On set"
+  },
+  {
+   "file": "media/fina-pizza-wine.jpg",
+   "category": "food",
+   "caption": "Restaurant · pizza and wine"
+  },
+  {
+   "file": "media/sandwich-chef-prep.jpg",
+   "category": "food",
+   "caption": "Sandwich shop · kitchen"
+  },
+  {
+   "file": "media/fina-dining-room.jpg",
+   "category": "food",
+   "caption": "Restaurant · dining room"
+  },
+  {
+   "file": "media/sandwich-smoothie-stack.jpg",
+   "category": "food",
+   "caption": "Sandwich shop · menu"
   }
  ]
 }

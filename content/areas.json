@@ -174,7 +174,12 @@
         }
       ],
       "cta_h2": "Have a project in the DC <em>area?</em>",
-      "cta_text": "Get in touch to discuss the location, schedule and production needs."
+      "cta_text": "Get in touch to discuss the location, schedule and production needs.",
+      "films": {
+        "eyebrow": "Testimonial work",
+        "h2": "Client testimonial <em>films.</em>",
+        "note": "Most of our DC-area work is testimonial and interview filming. A few short clips from recent client stories:"
+      }
     }
   ]
 }

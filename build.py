@@ -186,6 +186,18 @@ def write(path, s):
 def svc_rows(p):
     return "".join(f'<li><a href="{p}services/{s["slug"]}.html" data-img="{p}media/{s["img"]}"><span class="mono n">0{i+1}</span><img class="th" src="{p}media/{s["img"]}" alt="" loading="lazy"><h3>{s["short"]}</h3><p>{s["line"]}</p><span class="arr">{ARR}</span></a></li>' for i,s in enumerate(SERVICES))
 
+FILMS = [
+    {"video":"films/hl-kitchen-1.mp4","poster":"films/hl-kitchen-1.jpg","caption":"Kitchen renovation · homeowner story"},
+    {"video":"films/hl-kitchen-2.mp4","poster":"films/hl-kitchen-2.jpg","caption":"Kitchen renovation · two homeowners"},
+    {"video":"films/hl-kitchen-3.mp4","poster":"films/hl-kitchen-3.jpg","caption":"Kitchen remodel · couple interview"},
+    {"video":"films/hl-bathroom.mp4","poster":"films/hl-bathroom.jpg","caption":"Bathroom remodel · homeowner story"},
+]
+
+def films_html(p, eyebrow, h2, note=""):
+    """Short muted highlight loops (not full films) of real client interviews for Woodbridge Kitchen & Bath."""
+    cards = "".join(f'''<figure class="film rv"><div class="m"><video src="{p}media/{x["video"]}" poster="{p}media/{x["poster"]}" muted loop playsinline autoplay preload="none" aria-label="{esc(x["caption"])}"></video></div><figcaption class="mono">{esc(x["caption"])}</figcaption></figure>''' for x in FILMS)
+    return f'''<section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">{eyebrow}</p><h2 class="h-l">{h2}</h2>{f'<p class="lead" style="margin-top:var(--s2)">{note}</p>' if note else ""}<div class="films">{cards}</div></div></section>'''
+
 def media_tag(p, f, alt):
     if f.endswith(".mp4"): return f'<video src="{p}media/{f}" muted loop playsinline autoplay preload="metadata" aria-label="{esc(alt)}"></video>'
     return f'<img src="{p}media/{f}" alt="{esc(alt)}" loading="lazy">'
@@ -278,6 +290,7 @@ def service(sv):
 <section class="page-hero"><div class="wrap"><p class="crumbs mono"><a href="../index.html">Home</a> / <a href="index.html">Services</a> / {sv["short"]}</p>
 {h1(sv["h1"])}<p class="lead">{sv["lead"]}</p><div class="cta-row"><a class="btn" href="../contact.html">Start a project {ARR}</a><a class="btn ghost" href="tel:{TEL}">{PHONE}</a></div></div></section>
 <div class="strip">{strip}</div>
+{films_html(p, sv["films"]["eyebrow"], sv["films"]["h2"], sv["films"].get("note","")) if sv.get("films") else ""}
 <section class="sec"><div class="wrap two"><div><p class="mono eyebrow">Deliverables</p><h2 class="h-l">What we <em>produce.</em></h2></div><ul class="deliv rv">{deliv}</ul></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Why work with us</p></div><div class="prose rv"><h2 class="h-l">{sv["why_h2"]}</h2>{"".join(f"<p>{esc(x)}</p>" for x in sv["body"])}</div></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">Our process</p><div class="steps swipe">{steps}</div></div></section>
@@ -308,6 +321,7 @@ def area(a):
 {h1(a["h1"])}<p class="lead">{a["lead"]}</p><p class="lead" style="margin-top:var(--s2)">{a["lead2"]}</p><p class="mono" style="margin-top:var(--s3);color:var(--ink-2)">{a["towns"]}</p>
 <div class="cta-row"><a class="btn" href="../contact.html">Start a project {ARR}</a></div></div></section>
 <div class="strip"><div class="m"><img data-par src="{p}media/{a["img"]}" alt="Video production in {esc(a["name"])}" loading="lazy"></div><div class="m"><img data-par src="{p}media/f6.jpg" alt="Restaurant photography" loading="lazy"></div><div class="m"><img data-par src="{p}media/h1.jpg" alt="Hotel photography" loading="lazy"></div></div>
+{films_html(p, a["films"]["eyebrow"], a["films"]["h2"], a["films"].get("note","")) if a.get("films") else ""}
 <section class="sec"><div class="wrap two"><div><p class="mono eyebrow">Why work with us</p></div><div class="prose rv"><h2 class="h-l">{a["why_h2"]}</h2>{"".join(f"<p>{esc(x)}</p>" for x in a["body"])}</div></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap two"><div><p class="mono eyebrow">Services</p><h2 class="h-l">What we film in {a["name"]}</h2></div><ul class="deliv rv">{what}</ul></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap"><p class="mono eyebrow">FAQ</p>{faq_html(faq)}

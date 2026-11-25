@@ -340,10 +340,10 @@
         "Not everyone feels comfortable speaking on camera. We keep the setup relaxed, ask clear questions and give people time to explain their experience naturally. We do not need clients to memorize a script or deliver rehearsed lines.",
         "The interview is supported by footage of the finished space, the work itself and the details that help viewers understand the project."
       ],
-      "img": "media/k4.jpg",
+      "img": "media/films/hl-kitchen-2.jpg",
       "strip": [
-        "media/k2.jpg",
-        "media/k1.jpg",
+        "media/films/hl-kitchen-1.jpg",
+        "media/films/hl-bathroom.jpg",
         "media/b2.jpg"
       ],
       "deliv": [
@@ -399,7 +399,95 @@
         }
       ],
       "cta_h2": "Have a customer story<br>worth <em>sharing?</em>",
-      "cta_text": "Tell us about your business and the kind of testimonial video you need."
+      "cta_text": "Tell us about your business and the kind of testimonial video you need.",
+      "films": {
+        "eyebrow": "Client stories",
+        "h2": "Real homeowners, <em>in their own words.</em>",
+        "note": "Short clips from testimonial films we produced for Woodbridge Kitchen &amp; Bath. Each full film runs two to four minutes; these are the moments we cut for the web and social."
+      }
+    },
+    {
+      "slug": "interview-video-production",
+      "short": "Interview videos",
+      "name": "Interview Video Production",
+      "line": "Founder, team and customer interviews, lit and recorded properly.",
+      "title": "Interview Video Production in NYC, NJ & Washington DC | Turtle House",
+      "desc": "Interview video production for brands and businesses: founder stories, team profiles, expert explainers and customer interviews in New York, New Jersey and the Washington DC area.",
+      "h1": [
+        "Interview videos",
+        "that sound like",
+        "<em>people.</em>"
+      ],
+      "lead": "Two-camera interviews with clean sound, soft light and relaxed direction, so the person on camera sounds like themselves. We film founders, teams, experts and customers, then cut the full piece plus short clips for social.",
+      "body": [
+        "Most people freeze when a camera points at them. We set up quietly, start with easy questions and keep the conversation moving, so answers come out natural instead of rehearsed.",
+        "Every interview is filmed with two angles, lav and boom audio and supporting b-roll of the place and the work, so the final edit can be cut long for your website and short for Reels, Shorts and ads."
+      ],
+      "img": "media/films/hl-kitchen-3.jpg",
+      "strip": [
+        "media/films/hl-kitchen-2.jpg",
+        "media/films/hl-bathroom.jpg",
+        "media/b1.jpg"
+      ],
+      "deliv": [
+        {
+          "title": "Client interviews",
+          "text": "Professionally filmed interviews with clean audio, thoughtful lighting and a comfortable setup."
+        },
+        {
+          "title": "Project footage",
+          "text": "Supporting video of the finished work, materials, details and before-and-after results where available."
+        },
+        {
+          "title": "Full testimonial films",
+          "text": "Longer edits for your website, proposals and sales presentations."
+        },
+        {
+          "title": "Short-form edits",
+          "text": "Shorter versions for social media and digital advertising."
+        },
+        {
+          "title": "Captions",
+          "text": "On-screen captions to make videos easier to follow when viewers watch without sound."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you write a script for the client?",
+          "a": "We generally use interview questions and talking points rather than a word-for-word script. This helps clients speak naturally and in their own words."
+        },
+        {
+          "q": "Can you make short ads from a interview?",
+          "a": "Yes. We can create shorter edits for social media and digital advertising from the interview footage."
+        },
+        {
+          "q": "Do you film at the customer’s home or project location?",
+          "a": "Yes, when the location and participants are available. A finished home, renovation or completed project can provide useful visual context for the story."
+        }
+      ],
+      "index_line": "Founder, team, expert and customer interviews with two-camera setups and clean sound.",
+      "why_h2": "Good interviews are <em>directed,</em> not just recorded.",
+      "steps": [
+        {
+          "title": "Plan",
+          "text": "We discuss the story, interview participants, location and intended use. We prepare interview topics and a production plan."
+        },
+        {
+          "title": "Film",
+          "text": "We record the interview and supporting footage, keeping the setup as comfortable and unobtrusive as possible."
+        },
+        {
+          "title": "Edit & deliver",
+          "text": "We create the main testimonial film and the agreed shorter edits, with captions and formats for your website and social channels."
+        }
+      ],
+      "cta_h2": "Have someone worth <em>interviewing?</em>",
+      "cta_text": "Tell us who is on camera, where, and where the video will be used.",
+      "films": {
+        "eyebrow": "Interview work",
+        "h2": "Two cameras, clean sound, <em>real answers.</em>",
+        "note": "Clips from interviews we directed and filmed. The same setup works for founder stories, team profiles and expert videos."
+      }
     }
   ]
 }
