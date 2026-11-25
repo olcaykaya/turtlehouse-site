@@ -8,7 +8,7 @@ SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SRC, "dist")
 def J(n): return json.load(open(os.path.join(SRC, "content", n + ".json")))
 def F(x): x = (x or "").lstrip("/"); return x[6:] if x.startswith("media/") else x   # path inside /media
-_S = J("site"); PHONE, EMAIL, IG = _S["phone"], _S["email"], _S["instagram"]; TEL = "+1" + re.sub(r"\D", "", PHONE)[-10:]
+_S = J("site"); GA4 = (_S.get("ga4_id") or "").strip(); PHONE, EMAIL, IG = _S["phone"], _S["email"], _S["instagram"]; TEL = "+1" + re.sub(r"\D", "", PHONE)[-10:]
 
 ARR = '<svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>'
 
@@ -122,6 +122,16 @@ ORG = {"@context":"https://schema.org","@type":"ProfessionalService","@id":BASE+
 
 def esc(s): return html.escape(s, quote=True)
 
+def analytics(path):
+    """GA4 (only when content/site.json has ga4_id). Leads: call/email/IG clicks + contact form (thanks page)."""
+    if not GA4:
+        return ""
+    lead = "gtag('event','generate_lead',{method:'contact_form'});" if path.endswith("thanks.html") else ""
+    return f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{GA4}');{lead}
+document.addEventListener('click',function(e){{var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('tel:')==0)gtag('event','click_call',{{link_url:h}});else if(h.indexOf('mailto:')==0)gtag('event','click_email',{{link_url:h}});else if(h.indexOf('instagram.com')>-1)gtag('event','click_instagram');}});</script>'''
+
+
 def head(p, title, desc, path, schemas):
     sc = "".join(f'<script type="application/ld+json">{json.dumps(s)}</script>' for s in schemas)
     return f'''<!doctype html><html lang="en" class="js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -130,7 +140,7 @@ def head(p, title, desc, path, schemas):
 <meta name="theme-color" content="#f4f1ea"><link rel="icon" type="image/png" sizes="32x32" href="{p}media/favicon-32.png"><link rel="apple-touch-icon" href="{p}media/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{p}assets/style.css">{sc}</head><body>
+<link rel="stylesheet" href="{p}assets/style.css">{sc}{analytics(path)}</head><body>
 <div class="cursor" aria-hidden="true"></div>'''
 
 def nav(p):
