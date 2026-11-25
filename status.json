@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-25T00:29:46-0500",
+ "ts": "2026-11-25T01:30:15-0500",
  "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-24 21:02:06",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 20,
-  "last_line": "2026-11-24 23:49:06 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 21,
+  "last_line": "2026-11-25 01:07:14 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
