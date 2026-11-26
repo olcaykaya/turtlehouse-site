@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-26T10:27:13-0500",
- "host": "MacBookPro.lan",
+ "ts": "2026-11-26T12:59:47-0500",
+ "host": "Olcay-MacBook-Pro.local",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-26 08:15:27",
+  "last_claude_ok": "2026-11-26 12:06:01",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 21,
-  "last_line": "2026-11-26 10:27:13 claude <- [gbp — otomatik şirket görevi] Önce agent/company.md, sonra agent/roles/gbp.md oku ve adım"
+  "poll_errors_24h": 76,
+  "last_line": "2026-11-26 12:59:37 poll error timeout('The read operation timed out')"
  },
  "jobs": {
   "company": {
@@ -34,10 +34,7 @@
   }
  },
  "instagram": {
-  "followers": 962,
-  "posts": 188,
-  "last_post": "2026-10-23T23:39:41+0000",
-  "stories_live": 0
+  "error": "URLError(gaierror(8, 'nodename nor servname provided, or not known'))"
  },
  "disk_free_gb": 161.2
 }
