@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-25T18:07:58-0500",
+ "ts": "2026-11-25T19:23:53-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-25 18:02:53",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 35,
-  "last_line": "2026-11-25 18:02:53 claude -> Akşam taraması bitti. Rapor `agent/reports/2026-11-25-scout.md` dosyasında. Olcay'a mesaj "
+  "poll_errors_24h": 38,
+  "last_line": "2026-11-25 19:23:53 claude <- [Müdür — akşam özeti] Önce agent/company.md, sonra agent/roles/manager.md oku ve uygula. C"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-25",
    "site": "2026-11-23",
    "blog": "2026-11-23",
-   "manager": "2026-11-24",
+   "manager": "2026-11-25",
    "improve": "2026-11-24",
    "gbp": "2026-11-19"
   },
@@ -34,10 +34,10 @@
   }
  },
  "instagram": {
-  "followers": 963,
+  "followers": 964,
   "posts": 188,
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 161.7
+ "disk_free_gb": 161.6
 }
