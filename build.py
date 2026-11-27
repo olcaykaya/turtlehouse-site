@@ -8,6 +8,7 @@ SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SRC, "dist")
 def J(n): return json.load(open(os.path.join(SRC, "content", n + ".json")))
 def F(x): x = (x or "").lstrip("/"); return x[6:] if x.startswith("media/") else x   # path inside /media
+BUILD = os.environ.get("COMMIT_REF", "local")[:7]
 _S = J("site"); GA4 = (_S.get("ga4_id") or "").strip(); PHONE, EMAIL, IG = _S["phone"], _S["email"], _S["instagram"]; TEL = "+1" + re.sub(r"\D", "", PHONE)[-10:]
 
 ARR = '<svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>'
@@ -134,7 +135,7 @@ if(h.indexOf('tel:')==0)gtag('event','click_call',{{link_url:h}});else if(h.inde
 
 def head(p, title, desc, path, schemas):
     sc = "".join(f'<script type="application/ld+json">{json.dumps(s)}</script>' for s in schemas)
-    return f'''<!doctype html><html lang="en" class="js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    return f'''<!doctype html><html lang="en" class="js"><head><meta charset="utf-8"><meta name="build" content="{BUILD}"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{BASE}{path}">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}/media/k1.jpg"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f4f1ea"><link rel="icon" type="image/png" sizes="32x32" href="{p}media/favicon-32.png"><link rel="apple-touch-icon" href="{p}media/apple-touch-icon.png">
