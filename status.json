@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-26T18:02:26-0500",
+ "ts": "2026-11-26T19:03:14-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-26 18:02:26",
+  "last_claude_ok": "2026-11-26 19:00:42",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 75,
-  "last_line": "2026-11-26 18:02:26 claude -> Akşam taraması bitti, rapor `agent/reports/2026-11-26-scout.md` dosyasında. Olcay'a mesaj "
+  "poll_errors_24h": 73,
+  "last_line": "2026-11-26 19:00:42 claude -> 🐢 Bugün: - Story: Regnum dergi kapağı (yeni stil) gitti, diğer 3 aday elendi - Mail: 2 kon"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-26",
    "site": "2026-11-23",
    "blog": "2026-11-23",
-   "manager": "2026-11-25",
+   "manager": "2026-11-26",
    "improve": "2026-11-25",
    "gbp": "2026-11-26"
   },
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 157.4
+ "disk_free_gb": 157.1
 }
