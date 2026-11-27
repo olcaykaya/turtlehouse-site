@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-26T21:05:33-0500",
+ "ts": "2026-11-26T22:12:56-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-26 21:01:51",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 74,
-  "last_line": "2026-11-26 21:01:51 claude -> Bu geceki Gelişim işi bitti, rapor `agent/reports/2026-11-26-improve.md` dosyasında.  - **"
+  "poll_errors_24h": 76,
+  "last_line": "2026-11-26 22:12:46 poll error ConnectionResetError(54, 'Connection reset by peer')"
  },
  "jobs": {
   "company": {
