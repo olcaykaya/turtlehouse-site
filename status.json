@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-27T18:31:05-0500",
+ "ts": "2026-11-27T19:31:07-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-27 18:02:00",
+  "last_claude_ok": "2026-11-27 19:00:27",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 23,
-  "last_line": "2026-11-27 18:06:20 poll error timeout('The read operation timed out')"
+  "poll_errors_24h": 21,
+  "last_line": "2026-11-27 19:00:27 claude -> 🐢 Bugün: - Story: \"Editing\" ham→final ipucu story'si gitti (yeni şablon, 8.1). Le Speciali"
  },
  "jobs": {
   "company": {
@@ -15,7 +15,7 @@
    "email-pm": "2026-11-27",
    "site": "2026-11-23",
    "blog": "2026-11-23",
-   "manager": "2026-11-26",
+   "manager": "2026-11-27",
    "improve": "2026-11-26",
    "gbp": "2026-11-26"
   },
@@ -39,5 +39,5 @@
   "last_post": "2026-10-23T23:39:41+0000",
   "stories_live": 0
  },
- "disk_free_gb": 163.2
+ "disk_free_gb": 162.8
 }
