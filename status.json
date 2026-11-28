@@ -1,17 +1,17 @@
 {
- "ts": "2026-11-28T07:30:31-0500",
+ "ts": "2026-11-28T08:31:16-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
-  "last_claude_ok": "2026-11-27 21:02:08",
+  "last_claude_ok": "2026-11-28 08:01:50",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
   "poll_errors_24h": 35,
-  "last_line": "2026-11-28 07:30:21 poll error timeout('The read operation timed out')"
+  "last_line": "2026-11-28 08:30:04 claude <- [Story tasarımcısı — sabah, otomatik] CLAUDE.md'deki 'Morning pitch' adımlarını uygula. Ol"
  },
  "jobs": {
   "company": {
-   "email-am": "2026-11-27",
+   "email-am": "2026-11-28",
    "email-pm": "2026-11-27",
    "site": "2026-11-23",
    "blog": "2026-11-23",
