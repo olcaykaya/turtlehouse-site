@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-28T03:12:01-0500",
+ "ts": "2026-11-28T04:28:55-0500",
  "host": "MacBookPro.lan",
  "auth_alert_active": false,
  "log": {
   "last_claude_ok": "2026-11-27 21:02:08",
   "last_claude_error": "2026-11-16 23:30:45",
   "errors_24h": 0,
-  "poll_errors_24h": 27,
-  "last_line": "2026-11-28 03:11:51 poll error ConnectionResetError(54, 'Connection reset by peer')"
+  "poll_errors_24h": 30,
+  "last_line": "2026-11-28 04:28:45 poll error ConnectionResetError(54, 'Connection reset by peer')"
  },
  "jobs": {
   "company": {
